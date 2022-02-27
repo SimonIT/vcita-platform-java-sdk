@@ -1,0 +1,65 @@
+
+
+# Appointment
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**approvalMode** | **Object** |  |  [optional]
+**autoFollowUpHours** | **Integer** |  |  [optional]
+**businessUid** | **String** |  |  [optional]
+**categoryName** | **Object** |  |  [optional]
+**chargeType** | **String** |  |  [optional]
+**clientColorId** | **Integer** |  |  [optional]
+**clientFirstName** | **String** |  |  [optional]
+**clientId** | **String** |  |  [optional]
+**clientLastName** | **String** |  |  [optional]
+**conversationId** | **String** |  |  [optional]
+**coupon** | **Object** |  |  [optional]
+**createdAt** | **OffsetDateTime** |  |  [optional]
+**currency** | **Object** |  |  [optional]
+**duration** | **Integer** |  |  [optional]
+**followUpData** | **Object** |  |  [optional]
+**followUpNote** | **String** |  |  [optional]
+**followUpTime** | **Object** |  |  [optional]
+**followUpType** | **Object** |  |  [optional]
+**futureBookingsLimit** | **Integer** |  |  [optional]
+**id** | **String** |  |  [optional]
+**imageUrl** | **String** |  |  [optional]
+**interactionDetails** | **String** |  |  [optional]
+**interactionType** | **String** |  |  [optional]
+**invoices** | **List&lt;Object&gt;** |  |  [optional]
+**isRecurring** | **Boolean** |  |  [optional]
+**lastActionMessage** | **Object** |  |  [optional]
+**meetingReminderSms1** | **Boolean** |  |  [optional]
+**meetingReminderSms2** | **Boolean** |  |  [optional]
+**minHoursBeforeMeeting** | **Object** |  |  [optional]
+**noShow** | **Boolean** |  |  [optional]
+**notes** | **Object** |  |  [optional]
+**optionalTimes** | **List&lt;Object&gt;** |  |  [optional]
+**payment** | **Object** |  |  [optional]
+**paymentId** | **Object** |  |  [optional]
+**paymentStatus** | **Object** |  |  [optional]
+**price** | **String** |  |  [optional]
+**remindBeforeInHours1** | **Float** |  |  [optional]
+**remindBeforeInHours2** | **Integer** |  |  [optional]
+**requestData** | **Object** |  |  [optional]
+**seriesId** | **Object** |  |  [optional]
+**seriesInstanceCount** | **Object** |  |  [optional]
+**serviceId** | **String** |  |  [optional]
+**smsBookingConfirmation** | **Object** |  |  [optional]
+**sourceData** | [**SourceData**](SourceData.md) |  |  [optional]
+**staffDisplayName** | **String** |  |  [optional]
+**staffId** | **String** |  |  [optional]
+**staffImage** | **Object** |  |  [optional]
+**startTime** | **OffsetDateTime** |  |  [optional]
+**state** | **String** |  |  [optional]
+**title** | **String** |  |  [optional]
+**type** | **String** |  |  [optional]
+**updatedAt** | **OffsetDateTime** |  |  [optional]
+**zoomStartUrl** | **Object** |  |  [optional]
+
+
+

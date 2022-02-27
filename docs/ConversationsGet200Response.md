@@ -1,0 +1,14 @@
+
+
+# ConversationsGet200Response
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**Data17**](Data17.md) |  |  [optional]
+**status** | **String** |  |  [optional]
+
+
+
