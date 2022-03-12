@@ -20,9 +20,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.vcita.platform.client.model.FormData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -38,7 +42,6 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import com.vcita.platform.client.JSON;
@@ -68,9 +71,17 @@ public class InlineObject25 {
   @SerializedName(SERIALIZED_NAME_EVENT_INSTANCE_ID)
   private String eventInstanceId;
 
+  public static final String SERIALIZED_NAME_FORM_DATA = "form_data";
+  @SerializedName(SERIALIZED_NAME_FORM_DATA)
+  private FormData formData;
+
   public static final String SERIALIZED_NAME_MATTER_UID = "matter_uid";
   @SerializedName(SERIALIZED_NAME_MATTER_UID)
   private String matterUid;
+
+  public static final String SERIALIZED_NAME_OPTIONAL_TIMES = "optional_times";
+  @SerializedName(SERIALIZED_NAME_OPTIONAL_TIMES)
+  private List<OffsetDateTime> optionalTimes = null;
 
   public static final String SERIALIZED_NAME_SERVICE_ID = "service_id";
   @SerializedName(SERIALIZED_NAME_SERVICE_ID)
@@ -214,6 +225,29 @@ public class InlineObject25 {
   }
 
 
+  public InlineObject25 formData(FormData formData) {
+    
+    this.formData = formData;
+    return this;
+  }
+
+   /**
+   * Get formData
+   * @return formData
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public FormData getFormData() {
+    return formData;
+  }
+
+
+  public void setFormData(FormData formData) {
+    this.formData = formData;
+  }
+
+
   public InlineObject25 matterUid(String matterUid) {
     
     this.matterUid = matterUid;
@@ -234,6 +268,37 @@ public class InlineObject25 {
 
   public void setMatterUid(String matterUid) {
     this.matterUid = matterUid;
+  }
+
+
+  public InlineObject25 optionalTimes(List<OffsetDateTime> optionalTimes) {
+    
+    this.optionalTimes = optionalTimes;
+    return this;
+  }
+
+  public InlineObject25 addOptionalTimesItem(OffsetDateTime optionalTimesItem) {
+    if (this.optionalTimes == null) {
+      this.optionalTimes = new ArrayList<>();
+    }
+    this.optionalTimes.add(optionalTimesItem);
+    return this;
+  }
+
+   /**
+   * Get optionalTimes
+   * @return optionalTimes
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<OffsetDateTime> getOptionalTimes() {
+    return optionalTimes;
+  }
+
+
+  public void setOptionalTimes(List<OffsetDateTime> optionalTimes) {
+    this.optionalTimes = optionalTimes;
   }
 
 
@@ -389,7 +454,9 @@ public class InlineObject25 {
         Objects.equals(this.channel, inlineObject25.channel) &&
         Objects.equals(this.clientId, inlineObject25.clientId) &&
         Objects.equals(this.eventInstanceId, inlineObject25.eventInstanceId) &&
+        Objects.equals(this.formData, inlineObject25.formData) &&
         Objects.equals(this.matterUid, inlineObject25.matterUid) &&
+        Objects.equals(this.optionalTimes, inlineObject25.optionalTimes) &&
         Objects.equals(this.serviceId, inlineObject25.serviceId) &&
         Objects.equals(this.sourceName, inlineObject25.sourceName) &&
         Objects.equals(this.sourceUrl, inlineObject25.sourceUrl) &&
@@ -400,7 +467,7 @@ public class InlineObject25 {
 
   @Override
   public int hashCode() {
-    return Objects.hash(businessId, campaign, channel, clientId, eventInstanceId, matterUid, serviceId, sourceName, sourceUrl, staffId, startTime, timeZone);
+    return Objects.hash(businessId, campaign, channel, clientId, eventInstanceId, formData, matterUid, optionalTimes, serviceId, sourceName, sourceUrl, staffId, startTime, timeZone);
   }
 
   @Override
@@ -412,7 +479,9 @@ public class InlineObject25 {
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    eventInstanceId: ").append(toIndentedString(eventInstanceId)).append("\n");
+    sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
     sb.append("    matterUid: ").append(toIndentedString(matterUid)).append("\n");
+    sb.append("    optionalTimes: ").append(toIndentedString(optionalTimes)).append("\n");
     sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
     sb.append("    sourceName: ").append(toIndentedString(sourceName)).append("\n");
     sb.append("    sourceUrl: ").append(toIndentedString(sourceUrl)).append("\n");
@@ -446,7 +515,9 @@ public class InlineObject25 {
     openapiFields.add("channel");
     openapiFields.add("client_id");
     openapiFields.add("event_instance_id");
+    openapiFields.add("form_data");
     openapiFields.add("matter_uid");
+    openapiFields.add("optional_times");
     openapiFields.add("service_id");
     openapiFields.add("source_name");
     openapiFields.add("source_url");
@@ -469,13 +540,13 @@ public class InlineObject25 {
       if (jsonObj == null) {
         if (InlineObject25.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in InlineObject25 is not found in the empty JSON string", InlineObject25.openapiRequiredFields.toString()));
         }
       }
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<java.util.Map.Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (java.util.Map.Entry<String, JsonElement> entry : entries) {
         if (!InlineObject25.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InlineObject25` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }

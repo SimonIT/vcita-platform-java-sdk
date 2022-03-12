@@ -39,7 +39,6 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import com.vcita.platform.client.JSON;
@@ -139,13 +138,13 @@ public class Data2 {
       if (jsonObj == null) {
         if (Data2.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in Data2 is not found in the empty JSON string", Data2.openapiRequiredFields.toString()));
         }
       }
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<java.util.Map.Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (java.util.Map.Entry<String, JsonElement> entry : entries) {
         if (!Data2.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Data2` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }

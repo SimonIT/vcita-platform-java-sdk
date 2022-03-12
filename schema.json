@@ -3630,6 +3630,37 @@
         "properties": {},
         "type": "object"
       },
+      "form_data": {
+        "type": "object",
+        "properties": {
+          "fields": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "others": {
+            "$ref": "#/components/schemas/others"
+          },
+          "policies": {
+            "$ref": "#/components/schemas/policies"
+          },
+          "service_fields": {
+            "$ref": "#/components/schemas/service_fields"
+          }
+        }
+      },
+      "service_fields": {
+        "type": "object"
+      },
+      "others": {
+        "type": "object",
+        "properties": {
+          "notes": {
+            "nullable": true
+          }
+        }
+      },
       "forms_get_200_response": {
         "properties": {
           "data": {
@@ -16707,9 +16738,20 @@
                     "description": "Event instance uid. Required for event.",
                     "type": "string"
                   },
+                  "form_data": {
+                    "type": "object",
+                    "$ref": "#/components/schemas/form_data"
+                  },
                   "matter_uid": {
                     "description": "Matter uid",
                     "type": "string"
+                  },
+                  "optional_times": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
                   },
                   "service_id": {
                     "description": "Service uid. Required for appointment.",
