@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.vcita.platform.client.model.FormsSections;
+import com.vcita.platform.client.model.FormsFields;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -47,72 +47,45 @@ import java.util.Set;
 import com.vcita.platform.client.JSON;
 
 /**
- * InlineObject13
+ * FormsSections
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class InlineObject13 {
-  public static final String SERIALIZED_NAME_SECTIONS = "sections";
-  @SerializedName(SERIALIZED_NAME_SECTIONS)
-  private List<FormsSections> sections = null;
+public class FormsSections {
+  public static final String SERIALIZED_NAME_FIELDS = "fields";
+  @SerializedName(SERIALIZED_NAME_FIELDS)
+  private List<FormsFields> fields = null;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
-
-  public InlineObject13() { 
+  public FormsSections() { 
   }
 
-  public InlineObject13 sections(List<FormsSections> sections) {
+  public FormsSections fields(List<FormsFields> fields) {
     
-    this.sections = sections;
+    this.fields = fields;
     return this;
   }
 
-  public InlineObject13 addSectionsItem(FormsSections sectionsItem) {
-    if (this.sections == null) {
-      this.sections = new ArrayList<>();
+  public FormsSections addFieldsItem(FormsFields fieldsItem) {
+    if (this.fields == null) {
+      this.fields = new ArrayList<>();
     }
-    this.sections.add(sectionsItem);
+    this.fields.add(fieldsItem);
     return this;
   }
 
    /**
-   * A list sections in the form
-   * @return sections
+   * A list fields in the form
+   * @return fields
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "A list sections in the form")
+  @ApiModelProperty(value = "A list fields in the form")
 
-  public List<FormsSections> getSections() {
-    return sections;
+  public List<FormsFields> getFields() {
+    return fields;
   }
 
 
-  public void setSections(List<FormsSections> sections) {
-    this.sections = sections;
-  }
-
-
-  public InlineObject13 type(String type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * The type of the form
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The type of the form")
-
-  public String getType() {
-    return type;
-  }
-
-
-  public void setType(String type) {
-    this.type = type;
+  public void setFields(List<FormsFields> fields) {
+    this.fields = fields;
   }
 
 
@@ -124,22 +97,20 @@ public class InlineObject13 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineObject13 inlineObject13 = (InlineObject13) o;
-    return Objects.equals(this.sections, inlineObject13.sections) &&
-        Objects.equals(this.type, inlineObject13.type);
+    FormsSections formsSections = (FormsSections) o;
+    return Objects.equals(this.fields, formsSections.fields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sections, type);
+    return Objects.hash(fields);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineObject13 {\n");
-    sb.append("    sections: ").append(toIndentedString(sections)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("class FormsSections {\n");
+    sb.append("    fields: ").append(toIndentedString(fields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -162,8 +133,7 @@ public class InlineObject13 {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("sections");
-    openapiFields.add("type");
+    openapiFields.add("fields");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -173,28 +143,28 @@ public class InlineObject13 {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to InlineObject13
+  * @throws IOException if the JSON Object is invalid with respect to FormsSections
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (InlineObject13.openapiRequiredFields.isEmpty()) {
+        if (FormsSections.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in InlineObject13 is not found in the empty JSON string", InlineObject13.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FormsSections is not found in the empty JSON string", FormsSections.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!InlineObject13.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InlineObject13` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!FormsSections.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FormsSections` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArraysections = jsonObj.getAsJsonArray("sections");
-      // validate the optional field `sections` (array)
-      if (jsonArraysections != null) {
-        for (int i = 0; i < jsonArraysections.size(); i++) {
-          FormsSections.validateJsonObject(jsonArraysections.get(i).getAsJsonObject());
+      JsonArray jsonArrayfields = jsonObj.getAsJsonArray("fields");
+      // validate the optional field `fields` (array)
+      if (jsonArrayfields != null) {
+        for (int i = 0; i < jsonArrayfields.size(); i++) {
+          FormsFields.validateJsonObject(jsonArrayfields.get(i).getAsJsonObject());
         };
       }
   }
@@ -203,22 +173,22 @@ public class InlineObject13 {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!InlineObject13.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'InlineObject13' and its subtypes
+       if (!FormsSections.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FormsSections' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<InlineObject13> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(InlineObject13.class));
+       final TypeAdapter<FormsSections> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FormsSections.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<InlineObject13>() {
+       return (TypeAdapter<T>) new TypeAdapter<FormsSections>() {
            @Override
-           public void write(JsonWriter out, InlineObject13 value) throws IOException {
+           public void write(JsonWriter out, FormsSections value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public InlineObject13 read(JsonReader in) throws IOException {
+           public FormsSections read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -229,18 +199,18 @@ public class InlineObject13 {
   }
 
  /**
-  * Create an instance of InlineObject13 given an JSON string
+  * Create an instance of FormsSections given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of InlineObject13
-  * @throws IOException if the JSON string is invalid with respect to InlineObject13
+  * @return An instance of FormsSections
+  * @throws IOException if the JSON string is invalid with respect to FormsSections
   */
-  public static InlineObject13 fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, InlineObject13.class);
+  public static FormsSections fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FormsSections.class);
   }
 
  /**
-  * Convert an instance of InlineObject13 to an JSON string
+  * Convert an instance of FormsSections to an JSON string
   *
   * @return JSON string
   */

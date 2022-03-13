@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sections** | [**List&lt;Object&gt;**](Object.md) | A list sections in the form |  [optional]
+**sections** | [**List&lt;FormsSections&gt;**](FormsSections.md) | A list sections in the form |  [optional]
 **type** | **String** | The type of the form |  [optional]
 
 

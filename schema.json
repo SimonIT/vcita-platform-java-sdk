@@ -11301,10 +11301,12 @@
                   "sections": {
                     "description": "A list sections in the form",
                     "items": {
+                      "type": "object",
                       "properties": {
                         "fields": {
                           "description": "A list fields in the form",
                           "items": {
+                            "type": "object",
                             "properties": {
                               "default_value": {
                                 "description": "The default value the field should have",

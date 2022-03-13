@@ -197,8 +197,10 @@ docs/FieldsGet200Response.md
 docs/FieldsPost201Response.md
 docs/FormData.md
 docs/FormsApi.md
+docs/FormsFields.md
 docs/FormsGet200Response.md
 docs/FormsPut200Response.md
+docs/FormsSections.md
 docs/GlobalApi.md
 docs/GlobalAppointmentsGet200Response.md
 docs/GlobalBusinessesGet200Response.md
@@ -602,8 +604,10 @@ src/main/java/com/vcita/platform/client/model/FieldsFieldIdPut200Response.java
 src/main/java/com/vcita/platform/client/model/FieldsGet200Response.java
 src/main/java/com/vcita/platform/client/model/FieldsPost201Response.java
 src/main/java/com/vcita/platform/client/model/FormData.java
+src/main/java/com/vcita/platform/client/model/FormsFields.java
 src/main/java/com/vcita/platform/client/model/FormsGet200Response.java
 src/main/java/com/vcita/platform/client/model/FormsPut200Response.java
+src/main/java/com/vcita/platform/client/model/FormsSections.java
 src/main/java/com/vcita/platform/client/model/GlobalAppointmentsGet200Response.java
 src/main/java/com/vcita/platform/client/model/GlobalBusinessesGet200Response.java
 src/main/java/com/vcita/platform/client/model/GlobalCampaignRecipientsGet200Response.java
@@ -750,3 +754,4 @@ src/main/java/com/vcita/platform/client/model/TokensGet201Response.java
 src/main/java/com/vcita/platform/client/model/TokensPost201Response.java
 src/main/java/com/vcita/platform/client/model/TokensRevokePost201Response.java
 src/main/java/com/vcita/platform/client/model/Waitlist.java
+src/test/java/com/vcita/platform/client/model/FormsFieldsTest.java
