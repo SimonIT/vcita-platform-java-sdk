@@ -38,6 +38,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import com.vcita.platform.client.JSON;
@@ -232,9 +233,9 @@ public class BusinessesBusinessIdBusinessMetaPlan {
           throw new IllegalArgumentException(String.format("The required field(s) %s in BusinessesBusinessIdBusinessMetaPlan is not found in the empty JSON string", BusinessesBusinessIdBusinessMetaPlan.openapiRequiredFields.toString()));
         }
       }
-      Set<java.util.Map.Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
-      for (java.util.Map.Entry<String, JsonElement> entry : entries) {
+      for (Entry<String, JsonElement> entry : entries) {
         if (!BusinessesBusinessIdBusinessMetaPlan.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BusinessesBusinessIdBusinessMetaPlan` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
