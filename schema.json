@@ -2062,17 +2062,6 @@
         },
         "type": "object"
       },
-      "data39": {
-        "properties": {
-          "bookings": {
-            "items": {
-              "$ref": "#/components/schemas/booking"
-            },
-            "type": "array"
-          }
-        },
-        "type": "object"
-      },
       "data4": {
         "properties": {
           "businesses": {
@@ -4853,15 +4842,10 @@
         "type": "object"
       },
       "scheduling_bookings_get_200_response": {
-        "properties": {
-          "data": {
-            "$ref": "#/components/schemas/data39"
-          },
-          "status": {
-            "type": "string"
-          }
+        "items": {
+          "$ref": "#/components/schemas/booking"
         },
-        "type": "object"
+        "type": "array"
       },
       "scheduling_bookings_post_201_response": {
         "properties": {

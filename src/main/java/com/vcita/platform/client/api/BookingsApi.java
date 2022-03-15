@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.vcita.platform.client.model.Booking;
 import com.vcita.platform.client.model.InlineObject25;
 import com.vcita.platform.client.model.InlineObject26;
 import com.vcita.platform.client.model.InlineObject27;
@@ -34,7 +35,6 @@ import com.vcita.platform.client.model.InlineObject28;
 import com.vcita.platform.client.model.InlineObject29;
 import com.vcita.platform.client.model.SchedulingBookingsBookingUidUpdateRsvpStatePut200Response;
 import com.vcita.platform.client.model.SchedulingBookingsCancelPost200Response;
-import com.vcita.platform.client.model.SchedulingBookingsGet200Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost201Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost422Response;
 import com.vcita.platform.client.model.SchedulingWaitlistCancelPut200Response;
@@ -524,7 +524,7 @@ public class BookingsApi {
      * @param passed If equals to true, returns records from the past only. Otherwise, returns future bookings as well. (optional)
      * @param startTime Relevant to recurring appointment/event, returns appointment/event attendance which their start_time is bigger than this parameter (optional)
      * @param endTime Relevant to recurring appointment/event, returns appointment/event attendance which their start_time is smaller than this parameter (optional)
-     * @return SchedulingBookingsGet200Response
+     * @return List&lt;Booking&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -532,8 +532,8 @@ public class BookingsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public SchedulingBookingsGet200Response schedulingBookingsGet(String perPage, String offset, String businessId, String authorization, String matterUid, String passed, String startTime, String endTime) throws ApiException {
-        ApiResponse<SchedulingBookingsGet200Response> localVarResp = schedulingBookingsGetWithHttpInfo(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime);
+    public List<Booking> schedulingBookingsGet(String perPage, String offset, String businessId, String authorization, String matterUid, String passed, String startTime, String endTime) throws ApiException {
+        ApiResponse<List<Booking>> localVarResp = schedulingBookingsGetWithHttpInfo(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime);
         return localVarResp.getData();
     }
 
@@ -548,7 +548,7 @@ public class BookingsApi {
      * @param passed If equals to true, returns records from the past only. Otherwise, returns future bookings as well. (optional)
      * @param startTime Relevant to recurring appointment/event, returns appointment/event attendance which their start_time is bigger than this parameter (optional)
      * @param endTime Relevant to recurring appointment/event, returns appointment/event attendance which their start_time is smaller than this parameter (optional)
-     * @return ApiResponse&lt;SchedulingBookingsGet200Response&gt;
+     * @return ApiResponse&lt;List&lt;Booking&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -556,14 +556,14 @@ public class BookingsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SchedulingBookingsGet200Response> schedulingBookingsGetWithHttpInfo(String perPage, String offset, String businessId, String authorization, String matterUid, String passed, String startTime, String endTime) throws ApiException {
+    public ApiResponse<List<Booking>> schedulingBookingsGetWithHttpInfo(String perPage, String offset, String businessId, String authorization, String matterUid, String passed, String startTime, String endTime) throws ApiException {
         okhttp3.Call localVarCall = schedulingBookingsGetValidateBeforeCall(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime, null);
         try {
-            Type localVarReturnType = new TypeToken<SchedulingBookingsGet200Response>(){}.getType();
+            Type localVarReturnType = new TypeToken<List<Booking>>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingBookingsGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingBookingsGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<Booking>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<Booking>>(){});
             throw e;
         }
     }
@@ -588,10 +588,10 @@ public class BookingsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulingBookingsGetAsync(String perPage, String offset, String businessId, String authorization, String matterUid, String passed, String startTime, String endTime, final ApiCallback<SchedulingBookingsGet200Response> _callback) throws ApiException {
+    public okhttp3.Call schedulingBookingsGetAsync(String perPage, String offset, String businessId, String authorization, String matterUid, String passed, String startTime, String endTime, final ApiCallback<List<Booking>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulingBookingsGetValidateBeforeCall(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime, _callback);
-        Type localVarReturnType = new TypeToken<SchedulingBookingsGet200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Booking>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

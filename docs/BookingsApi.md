@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="schedulingBookingsGet"></a>
 # **schedulingBookingsGet**
-> SchedulingBookingsGet200Response schedulingBookingsGet(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime)
+> List&lt;Booking&gt; schedulingBookingsGet(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime)
 
 Get Bookings [Alpha] 
 
@@ -191,7 +191,7 @@ public class Example {
     String startTime = "startTime_example"; // String | Relevant to recurring appointment/event, returns appointment/event attendance which their start_time is bigger than this parameter
     String endTime = "endTime_example"; // String | Relevant to recurring appointment/event, returns appointment/event attendance which their start_time is smaller than this parameter
     try {
-      SchedulingBookingsGet200Response result = apiInstance.schedulingBookingsGet(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime);
+      List<Booking> result = apiInstance.schedulingBookingsGet(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BookingsApi#schedulingBookingsGet");
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SchedulingBookingsGet200Response**](SchedulingBookingsGet200Response.md)
+[**List&lt;Booking&gt;**](Booking.md)
 
 ### Authorization
 

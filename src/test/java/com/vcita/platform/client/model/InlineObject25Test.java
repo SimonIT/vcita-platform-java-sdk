@@ -18,9 +18,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.vcita.platform.client.model.FormData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -81,11 +85,27 @@ public class InlineObject25Test {
     }
 
     /**
+     * Test the property 'formData'
+     */
+    @Test
+    public void formDataTest() {
+        // TODO: test formData
+    }
+
+    /**
      * Test the property 'matterUid'
      */
     @Test
     public void matterUidTest() {
         // TODO: test matterUid
+    }
+
+    /**
+     * Test the property 'optionalTimes'
+     */
+    @Test
+    public void optionalTimesTest() {
+        // TODO: test optionalTimes
     }
 
     /**

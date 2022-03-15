@@ -14,6 +14,7 @@
 package com.vcita.platform.client.api;
 
 import com.vcita.platform.client.ApiException;
+import com.vcita.platform.client.model.Booking;
 import com.vcita.platform.client.model.InlineObject25;
 import com.vcita.platform.client.model.InlineObject26;
 import com.vcita.platform.client.model.InlineObject27;
@@ -21,7 +22,6 @@ import com.vcita.platform.client.model.InlineObject28;
 import com.vcita.platform.client.model.InlineObject29;
 import com.vcita.platform.client.model.SchedulingBookingsBookingUidUpdateRsvpStatePut200Response;
 import com.vcita.platform.client.model.SchedulingBookingsCancelPost200Response;
-import com.vcita.platform.client.model.SchedulingBookingsGet200Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost201Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost422Response;
 import com.vcita.platform.client.model.SchedulingWaitlistCancelPut200Response;
@@ -96,7 +96,7 @@ public class BookingsApiTest {
         String passed = null;
         String startTime = null;
         String endTime = null;
-                SchedulingBookingsGet200Response response = api.schedulingBookingsGet(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime);
+                List<Booking> response = api.schedulingBookingsGet(perPage, offset, businessId, authorization, matterUid, passed, startTime, endTime);
         // TODO: test validations
     }
     
