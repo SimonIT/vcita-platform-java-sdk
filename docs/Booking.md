@@ -8,6 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **approvalMode** | **String** |  |  [optional]
+**calendarStartTime** | **OffsetDateTime** |  |  [optional]
 **categoryName** | **Object** |  |  [optional]
 **chargeType** | **String** |  |  [optional]
 **clientId** | **String** |  |  [optional]
@@ -30,6 +31,7 @@ Name | Type | Description | Notes
 **paymentId** | **Object** |  |  [optional]
 **paymentStatus** | **Object** |  |  [optional]
 **policies** | [**Policies**](Policies.md) |  |  [optional]
+**policy** | **String** |  |  [optional]
 **price** | **String** |  |  [optional]
 **recurrenceDescription** | **String** |  |  [optional]
 **rsvpRequired** | **Boolean** |  |  [optional]

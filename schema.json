@@ -666,6 +666,10 @@
           "approval_mode": {
             "type": "string"
           },
+          "calendar_start_time": {
+            "format": "date-time",
+            "type": "string"
+          },
           "category_name": {
             "nullable": true
           },
@@ -734,6 +738,9 @@
           "policies": {
             "$ref": "#/components/schemas/policies"
           },
+          "policy": {
+            "type": "string"
+          },
           "price": {
             "type": "string"
           },
@@ -744,16 +751,19 @@
             "type": "boolean"
           },
           "rsvp_state": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "series_id": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "service_id": {
             "type": "string"
           },
           "source_data": {
-            "$ref": "#/components/schemas/source_data"
+            "$ref": "#/components/schemas/source_data",
+            "nullable": true
           },
           "staff_id": {
             "type": "string"
@@ -4764,7 +4774,8 @@
             "$ref": "#/components/schemas/meetings"
           },
           "rescheduling": {
-            "$ref": "#/components/schemas/rescheduling"
+            "$ref": "#/components/schemas/rescheduling",
+            "nullable": true
           }
         },
         "type": "object"

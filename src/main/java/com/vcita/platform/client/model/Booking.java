@@ -58,6 +58,10 @@ public class Booking {
   @SerializedName(SERIALIZED_NAME_APPROVAL_MODE)
   private String approvalMode;
 
+  public static final String SERIALIZED_NAME_CALENDAR_START_TIME = "calendar_start_time";
+  @SerializedName(SERIALIZED_NAME_CALENDAR_START_TIME)
+  private OffsetDateTime calendarStartTime;
+
   public static final String SERIALIZED_NAME_CATEGORY_NAME = "category_name";
   @SerializedName(SERIALIZED_NAME_CATEGORY_NAME)
   private Object categoryName = null;
@@ -145,6 +149,10 @@ public class Booking {
   public static final String SERIALIZED_NAME_POLICIES = "policies";
   @SerializedName(SERIALIZED_NAME_POLICIES)
   private Policies policies;
+
+  public static final String SERIALIZED_NAME_POLICY = "policy";
+  @SerializedName(SERIALIZED_NAME_POLICY)
+  private String policy;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
   @SerializedName(SERIALIZED_NAME_PRICE)
@@ -237,6 +245,29 @@ public class Booking {
 
   public void setApprovalMode(String approvalMode) {
     this.approvalMode = approvalMode;
+  }
+
+
+  public Booking calendarStartTime(OffsetDateTime calendarStartTime) {
+    
+    this.calendarStartTime = calendarStartTime;
+    return this;
+  }
+
+   /**
+   * Get calendarStartTime
+   * @return calendarStartTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getCalendarStartTime() {
+    return calendarStartTime;
+  }
+
+
+  public void setCalendarStartTime(OffsetDateTime calendarStartTime) {
+    this.calendarStartTime = calendarStartTime;
   }
 
 
@@ -754,6 +785,29 @@ public class Booking {
   }
 
 
+  public Booking policy(String policy) {
+    
+    this.policy = policy;
+    return this;
+  }
+
+   /**
+   * Get policy
+   * @return policy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getPolicy() {
+    return policy;
+  }
+
+
+  public void setPolicy(String policy) {
+    this.policy = policy;
+  }
+
+
   public Booking price(String price) {
     
     this.price = price;
@@ -1171,6 +1225,7 @@ public class Booking {
     }
     Booking booking = (Booking) o;
     return Objects.equals(this.approvalMode, booking.approvalMode) &&
+        Objects.equals(this.calendarStartTime, booking.calendarStartTime) &&
         Objects.equals(this.categoryName, booking.categoryName) &&
         Objects.equals(this.chargeType, booking.chargeType) &&
         Objects.equals(this.clientId, booking.clientId) &&
@@ -1193,6 +1248,7 @@ public class Booking {
         Objects.equals(this.paymentId, booking.paymentId) &&
         Objects.equals(this.paymentStatus, booking.paymentStatus) &&
         Objects.equals(this.policies, booking.policies) &&
+        Objects.equals(this.policy, booking.policy) &&
         Objects.equals(this.price, booking.price) &&
         Objects.equals(this.recurrenceDescription, booking.recurrenceDescription) &&
         Objects.equals(this.rsvpRequired, booking.rsvpRequired) &&
@@ -1218,7 +1274,7 @@ public class Booking {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approvalMode, categoryName, chargeType, clientId, conversationId, currency, depth, description, duration, endTime, imageUrl, interactionDetails, interactionType, invoicePaymentStatusUid, invoices, isRecurring, noShow, notes, payable, payment, paymentId, paymentStatus, policies, price, recurrenceDescription, rsvpRequired, rsvpState, seriesId, serviceId, sourceData, staffId, staffName, startTime, state, suggestedTimes, suggestedTimesEnd, timeZone, title, type, uid);
+    return Objects.hash(approvalMode, calendarStartTime, categoryName, chargeType, clientId, conversationId, currency, depth, description, duration, endTime, imageUrl, interactionDetails, interactionType, invoicePaymentStatusUid, invoices, isRecurring, noShow, notes, payable, payment, paymentId, paymentStatus, policies, policy, price, recurrenceDescription, rsvpRequired, rsvpState, seriesId, serviceId, sourceData, staffId, staffName, startTime, state, suggestedTimes, suggestedTimesEnd, timeZone, title, type, uid);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1233,6 +1289,7 @@ public class Booking {
     StringBuilder sb = new StringBuilder();
     sb.append("class Booking {\n");
     sb.append("    approvalMode: ").append(toIndentedString(approvalMode)).append("\n");
+    sb.append("    calendarStartTime: ").append(toIndentedString(calendarStartTime)).append("\n");
     sb.append("    categoryName: ").append(toIndentedString(categoryName)).append("\n");
     sb.append("    chargeType: ").append(toIndentedString(chargeType)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
@@ -1255,6 +1312,7 @@ public class Booking {
     sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
     sb.append("    paymentStatus: ").append(toIndentedString(paymentStatus)).append("\n");
     sb.append("    policies: ").append(toIndentedString(policies)).append("\n");
+    sb.append("    policy: ").append(toIndentedString(policy)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("    recurrenceDescription: ").append(toIndentedString(recurrenceDescription)).append("\n");
     sb.append("    rsvpRequired: ").append(toIndentedString(rsvpRequired)).append("\n");
@@ -1295,6 +1353,7 @@ public class Booking {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("approval_mode");
+    openapiFields.add("calendar_start_time");
     openapiFields.add("category_name");
     openapiFields.add("charge_type");
     openapiFields.add("client_id");
@@ -1317,6 +1376,7 @@ public class Booking {
     openapiFields.add("payment_id");
     openapiFields.add("payment_status");
     openapiFields.add("policies");
+    openapiFields.add("policy");
     openapiFields.add("price");
     openapiFields.add("recurrence_description");
     openapiFields.add("rsvp_required");
