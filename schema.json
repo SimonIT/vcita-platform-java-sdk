@@ -3494,7 +3494,17 @@
       },
       "event_instance": {
         "properties": {
+          "business_uid": {
+            "type": "string"
+          },
           "charge_type": {
+            "type": "string"
+          },
+          "confirmed_attendees": {
+            "type": "integer"
+          },
+          "created_at": {
+            "format": "date-time",
             "type": "string"
           },
           "currency": {
@@ -3513,11 +3523,20 @@
           "interaction_type": {
             "type": "string"
           },
+          "is_full": {
+            "type": "boolean"
+          },
+          "max_attendance": {
+            "type": "integer"
+          },
           "price": {
             "type": "string"
           },
           "service_id": {
             "type": "string"
+          },
+          "spots_open": {
+            "type": "integer"
           },
           "staff_id": {
             "type": "string"
@@ -3534,6 +3553,16 @@
           },
           "uid": {
             "type": "string"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "waitlist": {
+            "type": "boolean"
+          },
+          "waitlist_count": {
+            "type": "integer"
           }
         },
         "type": "object"

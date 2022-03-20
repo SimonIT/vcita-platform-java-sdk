@@ -49,9 +49,21 @@ import com.vcita.platform.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class EventInstance {
+  public static final String SERIALIZED_NAME_BUSINESS_UID = "business_uid";
+  @SerializedName(SERIALIZED_NAME_BUSINESS_UID)
+  private String businessUid;
+
   public static final String SERIALIZED_NAME_CHARGE_TYPE = "charge_type";
   @SerializedName(SERIALIZED_NAME_CHARGE_TYPE)
   private String chargeType;
+
+  public static final String SERIALIZED_NAME_CONFIRMED_ATTENDEES = "confirmed_attendees";
+  @SerializedName(SERIALIZED_NAME_CONFIRMED_ATTENDEES)
+  private Integer confirmedAttendees;
+
+  public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  private OffsetDateTime createdAt;
 
   public static final String SERIALIZED_NAME_CURRENCY = "currency";
   @SerializedName(SERIALIZED_NAME_CURRENCY)
@@ -73,6 +85,14 @@ public class EventInstance {
   @SerializedName(SERIALIZED_NAME_INTERACTION_TYPE)
   private String interactionType;
 
+  public static final String SERIALIZED_NAME_IS_FULL = "is_full";
+  @SerializedName(SERIALIZED_NAME_IS_FULL)
+  private Boolean isFull;
+
+  public static final String SERIALIZED_NAME_MAX_ATTENDANCE = "max_attendance";
+  @SerializedName(SERIALIZED_NAME_MAX_ATTENDANCE)
+  private Integer maxAttendance;
+
   public static final String SERIALIZED_NAME_PRICE = "price";
   @SerializedName(SERIALIZED_NAME_PRICE)
   private String price;
@@ -80,6 +100,10 @@ public class EventInstance {
   public static final String SERIALIZED_NAME_SERVICE_ID = "service_id";
   @SerializedName(SERIALIZED_NAME_SERVICE_ID)
   private String serviceId;
+
+  public static final String SERIALIZED_NAME_SPOTS_OPEN = "spots_open";
+  @SerializedName(SERIALIZED_NAME_SPOTS_OPEN)
+  private Integer spotsOpen;
 
   public static final String SERIALIZED_NAME_STAFF_ID = "staff_id";
   @SerializedName(SERIALIZED_NAME_STAFF_ID)
@@ -101,8 +125,43 @@ public class EventInstance {
   @SerializedName(SERIALIZED_NAME_UID)
   private String uid;
 
+  public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
+  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  private OffsetDateTime updatedAt;
+
+  public static final String SERIALIZED_NAME_WAITLIST = "waitlist";
+  @SerializedName(SERIALIZED_NAME_WAITLIST)
+  private Boolean waitlist;
+
+  public static final String SERIALIZED_NAME_WAITLIST_COUNT = "waitlist_count";
+  @SerializedName(SERIALIZED_NAME_WAITLIST_COUNT)
+  private Integer waitlistCount;
+
   public EventInstance() { 
   }
+
+  public EventInstance businessUid(String businessUid) {
+    
+    this.businessUid = businessUid;
+    return this;
+  }
+
+   /**
+   * Get businessUid
+   * @return businessUid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBusinessUid() {
+    return businessUid;
+  }
+
+
+  public void setBusinessUid(String businessUid) {
+    this.businessUid = businessUid;
+  }
+
 
   public EventInstance chargeType(String chargeType) {
     
@@ -124,6 +183,52 @@ public class EventInstance {
 
   public void setChargeType(String chargeType) {
     this.chargeType = chargeType;
+  }
+
+
+  public EventInstance confirmedAttendees(Integer confirmedAttendees) {
+    
+    this.confirmedAttendees = confirmedAttendees;
+    return this;
+  }
+
+   /**
+   * Get confirmedAttendees
+   * @return confirmedAttendees
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getConfirmedAttendees() {
+    return confirmedAttendees;
+  }
+
+
+  public void setConfirmedAttendees(Integer confirmedAttendees) {
+    this.confirmedAttendees = confirmedAttendees;
+  }
+
+
+  public EventInstance createdAt(OffsetDateTime createdAt) {
+    
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
   }
 
 
@@ -242,6 +347,52 @@ public class EventInstance {
   }
 
 
+  public EventInstance isFull(Boolean isFull) {
+    
+    this.isFull = isFull;
+    return this;
+  }
+
+   /**
+   * Get isFull
+   * @return isFull
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getIsFull() {
+    return isFull;
+  }
+
+
+  public void setIsFull(Boolean isFull) {
+    this.isFull = isFull;
+  }
+
+
+  public EventInstance maxAttendance(Integer maxAttendance) {
+    
+    this.maxAttendance = maxAttendance;
+    return this;
+  }
+
+   /**
+   * Get maxAttendance
+   * @return maxAttendance
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMaxAttendance() {
+    return maxAttendance;
+  }
+
+
+  public void setMaxAttendance(Integer maxAttendance) {
+    this.maxAttendance = maxAttendance;
+  }
+
+
   public EventInstance price(String price) {
     
     this.price = price;
@@ -285,6 +436,29 @@ public class EventInstance {
 
   public void setServiceId(String serviceId) {
     this.serviceId = serviceId;
+  }
+
+
+  public EventInstance spotsOpen(Integer spotsOpen) {
+    
+    this.spotsOpen = spotsOpen;
+    return this;
+  }
+
+   /**
+   * Get spotsOpen
+   * @return spotsOpen
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getSpotsOpen() {
+    return spotsOpen;
+  }
+
+
+  public void setSpotsOpen(Integer spotsOpen) {
+    this.spotsOpen = spotsOpen;
   }
 
 
@@ -403,6 +577,75 @@ public class EventInstance {
   }
 
 
+  public EventInstance updatedAt(OffsetDateTime updatedAt) {
+    
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
+
+  public EventInstance waitlist(Boolean waitlist) {
+    
+    this.waitlist = waitlist;
+    return this;
+  }
+
+   /**
+   * Get waitlist
+   * @return waitlist
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getWaitlist() {
+    return waitlist;
+  }
+
+
+  public void setWaitlist(Boolean waitlist) {
+    this.waitlist = waitlist;
+  }
+
+
+  public EventInstance waitlistCount(Integer waitlistCount) {
+    
+    this.waitlistCount = waitlistCount;
+    return this;
+  }
+
+   /**
+   * Get waitlistCount
+   * @return waitlistCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getWaitlistCount() {
+    return waitlistCount;
+  }
+
+
+  public void setWaitlistCount(Integer waitlistCount) {
+    this.waitlistCount = waitlistCount;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -412,43 +655,61 @@ public class EventInstance {
       return false;
     }
     EventInstance eventInstance = (EventInstance) o;
-    return Objects.equals(this.chargeType, eventInstance.chargeType) &&
+    return Objects.equals(this.businessUid, eventInstance.businessUid) &&
+        Objects.equals(this.chargeType, eventInstance.chargeType) &&
+        Objects.equals(this.confirmedAttendees, eventInstance.confirmedAttendees) &&
+        Objects.equals(this.createdAt, eventInstance.createdAt) &&
         Objects.equals(this.currency, eventInstance.currency) &&
         Objects.equals(this.duration, eventInstance.duration) &&
         Objects.equals(this.endTime, eventInstance.endTime) &&
         Objects.equals(this.interactionDetails, eventInstance.interactionDetails) &&
         Objects.equals(this.interactionType, eventInstance.interactionType) &&
+        Objects.equals(this.isFull, eventInstance.isFull) &&
+        Objects.equals(this.maxAttendance, eventInstance.maxAttendance) &&
         Objects.equals(this.price, eventInstance.price) &&
         Objects.equals(this.serviceId, eventInstance.serviceId) &&
+        Objects.equals(this.spotsOpen, eventInstance.spotsOpen) &&
         Objects.equals(this.staffId, eventInstance.staffId) &&
         Objects.equals(this.startTime, eventInstance.startTime) &&
         Objects.equals(this.state, eventInstance.state) &&
         Objects.equals(this.title, eventInstance.title) &&
-        Objects.equals(this.uid, eventInstance.uid);
+        Objects.equals(this.uid, eventInstance.uid) &&
+        Objects.equals(this.updatedAt, eventInstance.updatedAt) &&
+        Objects.equals(this.waitlist, eventInstance.waitlist) &&
+        Objects.equals(this.waitlistCount, eventInstance.waitlistCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chargeType, currency, duration, endTime, interactionDetails, interactionType, price, serviceId, staffId, startTime, state, title, uid);
+    return Objects.hash(businessUid, chargeType, confirmedAttendees, createdAt, currency, duration, endTime, interactionDetails, interactionType, isFull, maxAttendance, price, serviceId, spotsOpen, staffId, startTime, state, title, uid, updatedAt, waitlist, waitlistCount);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventInstance {\n");
+    sb.append("    businessUid: ").append(toIndentedString(businessUid)).append("\n");
     sb.append("    chargeType: ").append(toIndentedString(chargeType)).append("\n");
+    sb.append("    confirmedAttendees: ").append(toIndentedString(confirmedAttendees)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
     sb.append("    interactionDetails: ").append(toIndentedString(interactionDetails)).append("\n");
     sb.append("    interactionType: ").append(toIndentedString(interactionType)).append("\n");
+    sb.append("    isFull: ").append(toIndentedString(isFull)).append("\n");
+    sb.append("    maxAttendance: ").append(toIndentedString(maxAttendance)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
+    sb.append("    spotsOpen: ").append(toIndentedString(spotsOpen)).append("\n");
     sb.append("    staffId: ").append(toIndentedString(staffId)).append("\n");
     sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    waitlist: ").append(toIndentedString(waitlist)).append("\n");
+    sb.append("    waitlistCount: ").append(toIndentedString(waitlistCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -471,19 +732,28 @@ public class EventInstance {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("business_uid");
     openapiFields.add("charge_type");
+    openapiFields.add("confirmed_attendees");
+    openapiFields.add("created_at");
     openapiFields.add("currency");
     openapiFields.add("duration");
     openapiFields.add("end_time");
     openapiFields.add("interaction_details");
     openapiFields.add("interaction_type");
+    openapiFields.add("is_full");
+    openapiFields.add("max_attendance");
     openapiFields.add("price");
     openapiFields.add("service_id");
+    openapiFields.add("spots_open");
     openapiFields.add("staff_id");
     openapiFields.add("start_time");
     openapiFields.add("state");
     openapiFields.add("title");
     openapiFields.add("uid");
+    openapiFields.add("updated_at");
+    openapiFields.add("waitlist");
+    openapiFields.add("waitlist_count");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
