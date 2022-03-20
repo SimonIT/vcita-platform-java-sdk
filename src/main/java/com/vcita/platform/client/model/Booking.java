@@ -25,6 +25,7 @@ import com.vcita.platform.client.model.SourceData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.net.URI;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -100,7 +101,7 @@ public class Booking {
 
   public static final String SERIALIZED_NAME_IMAGE_URL = "image_url";
   @SerializedName(SERIALIZED_NAME_IMAGE_URL)
-  private String imageUrl;
+  private URI imageUrl;
 
   public static final String SERIALIZED_NAME_INTERACTION_DETAILS = "interaction_details";
   @SerializedName(SERIALIZED_NAME_INTERACTION_DETAILS)
@@ -478,7 +479,7 @@ public class Booking {
   }
 
 
-  public Booking imageUrl(String imageUrl) {
+  public Booking imageUrl(URI imageUrl) {
     
     this.imageUrl = imageUrl;
     return this;
@@ -491,12 +492,12 @@ public class Booking {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getImageUrl() {
+  public URI getImageUrl() {
     return imageUrl;
   }
 
 
-  public void setImageUrl(String imageUrl) {
+  public void setImageUrl(URI imageUrl) {
     this.imageUrl = imageUrl;
   }
 

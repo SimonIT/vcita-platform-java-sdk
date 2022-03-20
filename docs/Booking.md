@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **description** | **Object** |  |  [optional]
 **duration** | **Integer** |  |  [optional]
 **endTime** | **OffsetDateTime** |  |  [optional]
-**imageUrl** | **String** |  |  [optional]
+**imageUrl** | **URI** |  |  [optional]
 **interactionDetails** | **String** |  |  [optional]
 **interactionType** | **String** |  |  [optional]
 **invoicePaymentStatusUid** | **Object** |  |  [optional]

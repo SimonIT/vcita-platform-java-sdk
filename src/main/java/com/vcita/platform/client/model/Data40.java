@@ -53,6 +53,10 @@ public class Data40 {
   @SerializedName(SERIALIZED_NAME_BOOKING)
   private Booking1 booking;
 
+  public static final String SERIALIZED_NAME_TOKEN = "token";
+  @SerializedName(SERIALIZED_NAME_TOKEN)
+  private String token;
+
   public Data40() { 
   }
 
@@ -79,6 +83,29 @@ public class Data40 {
   }
 
 
+  public Data40 token(String token) {
+    
+    this.token = token;
+    return this;
+  }
+
+   /**
+   * Get token
+   * @return token
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getToken() {
+    return token;
+  }
+
+
+  public void setToken(String token) {
+    this.token = token;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -88,12 +115,13 @@ public class Data40 {
       return false;
     }
     Data40 data40 = (Data40) o;
-    return Objects.equals(this.booking, data40.booking);
+    return Objects.equals(this.booking, data40.booking) &&
+        Objects.equals(this.token, data40.token);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(booking);
+    return Objects.hash(booking, token);
   }
 
   @Override
@@ -101,6 +129,7 @@ public class Data40 {
     StringBuilder sb = new StringBuilder();
     sb.append("class Data40 {\n");
     sb.append("    booking: ").append(toIndentedString(booking)).append("\n");
+    sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -124,6 +153,7 @@ public class Data40 {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("booking");
+    openapiFields.add("token");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

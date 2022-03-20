@@ -699,7 +699,8 @@
             "type": "string"
           },
           "image_url": {
-            "type": "string"
+            "type": "string",
+            "format": "uri"
           },
           "interaction_details": {
             "type": "string"
@@ -2087,6 +2088,9 @@
         "properties": {
           "booking": {
             "$ref": "#/components/schemas/booking1"
+          },
+          "token": {
+            "type": "string"
           }
         },
         "type": "object"
