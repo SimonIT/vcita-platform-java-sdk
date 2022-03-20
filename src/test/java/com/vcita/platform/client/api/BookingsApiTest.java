@@ -21,7 +21,6 @@ import com.vcita.platform.client.model.InlineObject27;
 import com.vcita.platform.client.model.InlineObject28;
 import com.vcita.platform.client.model.InlineObject29;
 import com.vcita.platform.client.model.SchedulingBookingsBookingUidUpdateRsvpStatePut200Response;
-import com.vcita.platform.client.model.SchedulingBookingsCancelPost200Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost201Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost422Response;
 import com.vcita.platform.client.model.SchedulingWaitlistCancelPut200Response;
@@ -74,7 +73,7 @@ public class BookingsApiTest {
     public void schedulingBookingsCancelPostTest() throws ApiException {
         String authorization = null;
         InlineObject26 inlineObject26 = null;
-                SchedulingBookingsCancelPost200Response response = api.schedulingBookingsCancelPost(authorization, inlineObject26);
+                Booking response = api.schedulingBookingsCancelPost(authorization, inlineObject26);
         // TODO: test validations
     }
     

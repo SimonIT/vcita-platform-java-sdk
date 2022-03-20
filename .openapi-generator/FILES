@@ -329,7 +329,6 @@ docs/Rescheduling.md
 docs/SchedulingAppointmentsAppointmentIdGet200Response.md
 docs/SchedulingAppointmentsGet200Response.md
 docs/SchedulingBookingsBookingUidUpdateRsvpStatePut200Response.md
-docs/SchedulingBookingsCancelPost200Response.md
 docs/SchedulingBookingsPost201Response.md
 docs/SchedulingBookingsPost422Response.md
 docs/SchedulingEventInstanceEventInstanceIdGet200Response.md
@@ -723,7 +722,6 @@ src/main/java/com/vcita/platform/client/model/Rescheduling.java
 src/main/java/com/vcita/platform/client/model/SchedulingAppointmentsAppointmentIdGet200Response.java
 src/main/java/com/vcita/platform/client/model/SchedulingAppointmentsGet200Response.java
 src/main/java/com/vcita/platform/client/model/SchedulingBookingsBookingUidUpdateRsvpStatePut200Response.java
-src/main/java/com/vcita/platform/client/model/SchedulingBookingsCancelPost200Response.java
 src/main/java/com/vcita/platform/client/model/SchedulingBookingsPost201Response.java
 src/main/java/com/vcita/platform/client/model/SchedulingBookingsPost422Response.java
 src/main/java/com/vcita/platform/client/model/SchedulingEventInstanceEventInstanceIdGet200Response.java
