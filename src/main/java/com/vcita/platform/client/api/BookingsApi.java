@@ -34,7 +34,6 @@ import com.vcita.platform.client.model.InlineObject27;
 import com.vcita.platform.client.model.InlineObject28;
 import com.vcita.platform.client.model.InlineObject29;
 import com.vcita.platform.client.model.SchedulingBookingsBookingUidUpdateRsvpStatePut200Response;
-import com.vcita.platform.client.model.SchedulingBookingsCancelPost200Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost201Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost422Response;
 import com.vcita.platform.client.model.SchedulingWaitlistCancelPut200Response;
@@ -329,7 +328,7 @@ public class BookingsApi {
      * cancel booking
      * @param authorization API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; (required)
      * @param inlineObject26  (optional)
-     * @return SchedulingBookingsCancelPost200Response
+     * @return Booking
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -337,8 +336,8 @@ public class BookingsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public SchedulingBookingsCancelPost200Response schedulingBookingsCancelPost(String authorization, InlineObject26 inlineObject26) throws ApiException {
-        ApiResponse<SchedulingBookingsCancelPost200Response> localVarResp = schedulingBookingsCancelPostWithHttpInfo(authorization, inlineObject26);
+    public Booking schedulingBookingsCancelPost(String authorization, InlineObject26 inlineObject26) throws ApiException {
+        ApiResponse<Booking> localVarResp = schedulingBookingsCancelPostWithHttpInfo(authorization, inlineObject26);
         return localVarResp.getData();
     }
 
@@ -347,7 +346,7 @@ public class BookingsApi {
      * cancel booking
      * @param authorization API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; (required)
      * @param inlineObject26  (optional)
-     * @return ApiResponse&lt;SchedulingBookingsCancelPost200Response&gt;
+     * @return ApiResponse&lt;Booking&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -355,14 +354,14 @@ public class BookingsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SchedulingBookingsCancelPost200Response> schedulingBookingsCancelPostWithHttpInfo(String authorization, InlineObject26 inlineObject26) throws ApiException {
+    public ApiResponse<Booking> schedulingBookingsCancelPostWithHttpInfo(String authorization, InlineObject26 inlineObject26) throws ApiException {
         okhttp3.Call localVarCall = schedulingBookingsCancelPostValidateBeforeCall(authorization, inlineObject26, null);
         try {
-            Type localVarReturnType = new TypeToken<SchedulingBookingsCancelPost200Response>(){}.getType();
+            Type localVarReturnType = new TypeToken<Booking>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingBookingsCancelPost200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingBookingsCancelPost200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Booking>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Booking>(){});
             throw e;
         }
     }
@@ -381,10 +380,10 @@ public class BookingsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulingBookingsCancelPostAsync(String authorization, InlineObject26 inlineObject26, final ApiCallback<SchedulingBookingsCancelPost200Response> _callback) throws ApiException {
+    public okhttp3.Call schedulingBookingsCancelPostAsync(String authorization, InlineObject26 inlineObject26, final ApiCallback<Booking> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulingBookingsCancelPostValidateBeforeCall(authorization, inlineObject26, _callback);
-        Type localVarReturnType = new TypeToken<SchedulingBookingsCancelPost200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<Booking>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

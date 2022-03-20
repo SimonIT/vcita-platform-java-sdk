@@ -390,7 +390,6 @@ public class JSON {
             .registerTypeAdapterFactory(new com.vcita.platform.client.model.SchedulingAppointmentsAppointmentIdGet200Response.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.vcita.platform.client.model.SchedulingAppointmentsGet200Response.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.vcita.platform.client.model.SchedulingBookingsBookingUidUpdateRsvpStatePut200Response.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new com.vcita.platform.client.model.SchedulingBookingsCancelPost200Response.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.vcita.platform.client.model.SchedulingBookingsPost201Response.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.vcita.platform.client.model.SchedulingBookingsPost422Response.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.vcita.platform.client.model.SchedulingEventInstanceEventInstanceIdGet200Response.CustomTypeAdapterFactory())

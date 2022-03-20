@@ -527,7 +527,6 @@ Class | Method | HTTP request | Description
  - [SchedulingAppointmentsAppointmentIdGet200Response](docs/SchedulingAppointmentsAppointmentIdGet200Response.md)
  - [SchedulingAppointmentsGet200Response](docs/SchedulingAppointmentsGet200Response.md)
  - [SchedulingBookingsBookingUidUpdateRsvpStatePut200Response](docs/SchedulingBookingsBookingUidUpdateRsvpStatePut200Response.md)
- - [SchedulingBookingsCancelPost200Response](docs/SchedulingBookingsCancelPost200Response.md)
  - [SchedulingBookingsPost201Response](docs/SchedulingBookingsPost201Response.md)
  - [SchedulingBookingsPost422Response](docs/SchedulingBookingsPost422Response.md)
  - [SchedulingEventInstanceEventInstanceIdGet200Response](docs/SchedulingEventInstanceEventInstanceIdGet200Response.md)

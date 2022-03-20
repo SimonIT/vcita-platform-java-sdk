@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 <a name="schedulingBookingsCancelPost"></a>
 # **schedulingBookingsCancelPost**
-> SchedulingBookingsCancelPost200Response schedulingBookingsCancelPost(authorization, inlineObject26)
+> Booking schedulingBookingsCancelPost(authorization, inlineObject26)
 
 Cancel a Booking [Alpha]
 
@@ -116,7 +116,7 @@ public class Example {
     String authorization = "authorization_example"; // String | API Token. The resulting header should look like this: 'Authorization: \"Bearer API_TOKEN\"'
     InlineObject26 inlineObject26 = new InlineObject26(); // InlineObject26 | 
     try {
-      SchedulingBookingsCancelPost200Response result = apiInstance.schedulingBookingsCancelPost(authorization, inlineObject26);
+      Booking result = apiInstance.schedulingBookingsCancelPost(authorization, inlineObject26);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BookingsApi#schedulingBookingsCancelPost");
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SchedulingBookingsCancelPost200Response**](SchedulingBookingsCancelPost200Response.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 

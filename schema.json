@@ -4880,17 +4880,6 @@
         },
         "type": "object"
       },
-      "scheduling_bookings_cancel_post_200_response": {
-        "properties": {
-          "data": {
-            "$ref": "#/components/schemas/data40"
-          },
-          "status": {
-            "type": "string"
-          }
-        },
-        "type": "object"
-      },
       "scheduling_bookings_get_200_response": {
         "items": {
           "$ref": "#/components/schemas/booking"
@@ -16987,7 +16976,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/scheduling_bookings_cancel_post_200_response"
+                  "$ref": "#/components/schemas/booking"
                 }
               }
             },
