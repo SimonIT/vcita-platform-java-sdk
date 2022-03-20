@@ -804,6 +804,9 @@
       },
       "booking1": {
         "properties": {
+          "auto_reply_message": {
+            "type": "string"
+          },
           "business_id": {
             "type": "string"
           },
@@ -825,6 +828,9 @@
           },
           "id": {
             "type": "string"
+          },
+          "payment_status": {
+            "nullable": true
           },
           "service_id": {
             "nullable": true,

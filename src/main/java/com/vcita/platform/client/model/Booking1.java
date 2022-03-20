@@ -51,6 +51,10 @@ import com.vcita.platform.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Booking1 {
+  public static final String SERIALIZED_NAME_AUTO_REPLY_MESSAGE = "auto_reply_message";
+  @SerializedName(SERIALIZED_NAME_AUTO_REPLY_MESSAGE)
+  private String autoReplyMessage;
+
   public static final String SERIALIZED_NAME_BUSINESS_ID = "business_id";
   @SerializedName(SERIALIZED_NAME_BUSINESS_ID)
   private String businessId;
@@ -78,6 +82,10 @@ public class Booking1 {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_PAYMENT_STATUS = "payment_status";
+  @SerializedName(SERIALIZED_NAME_PAYMENT_STATUS)
+  private Object paymentStatus = null;
 
   public static final String SERIALIZED_NAME_SERVICE_ID = "service_id";
   @SerializedName(SERIALIZED_NAME_SERVICE_ID)
@@ -113,6 +121,29 @@ public class Booking1 {
 
   public Booking1() { 
   }
+
+  public Booking1 autoReplyMessage(String autoReplyMessage) {
+    
+    this.autoReplyMessage = autoReplyMessage;
+    return this;
+  }
+
+   /**
+   * Get autoReplyMessage
+   * @return autoReplyMessage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAutoReplyMessage() {
+    return autoReplyMessage;
+  }
+
+
+  public void setAutoReplyMessage(String autoReplyMessage) {
+    this.autoReplyMessage = autoReplyMessage;
+  }
+
 
   public Booking1 businessId(String businessId) {
     
@@ -272,6 +303,29 @@ public class Booking1 {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+  public Booking1 paymentStatus(Object paymentStatus) {
+    
+    this.paymentStatus = paymentStatus;
+    return this;
+  }
+
+   /**
+   * Get paymentStatus
+   * @return paymentStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Object getPaymentStatus() {
+    return paymentStatus;
+  }
+
+
+  public void setPaymentStatus(Object paymentStatus) {
+    this.paymentStatus = paymentStatus;
   }
 
 
@@ -468,13 +522,15 @@ public class Booking1 {
       return false;
     }
     Booking1 booking1 = (Booking1) o;
-    return Objects.equals(this.businessId, booking1.businessId) &&
+    return Objects.equals(this.autoReplyMessage, booking1.autoReplyMessage) &&
+        Objects.equals(this.businessId, booking1.businessId) &&
         Objects.equals(this.clientId, booking1.clientId) &&
         Objects.equals(this.conversationId, booking1.conversationId) &&
         Objects.equals(this.createdAt, booking1.createdAt) &&
         Objects.equals(this.duration, booking1.duration) &&
         Objects.equals(this.eventInstanceId, booking1.eventInstanceId) &&
         Objects.equals(this.id, booking1.id) &&
+        Objects.equals(this.paymentStatus, booking1.paymentStatus) &&
         Objects.equals(this.serviceId, booking1.serviceId) &&
         Objects.equals(this.sourceData, booking1.sourceData) &&
         Objects.equals(this.staffId, booking1.staffId) &&
@@ -491,7 +547,7 @@ public class Booking1 {
 
   @Override
   public int hashCode() {
-    return Objects.hash(businessId, clientId, conversationId, createdAt, duration, eventInstanceId, id, serviceId, sourceData, staffId, startTime, status, timeZone, title, type);
+    return Objects.hash(autoReplyMessage, businessId, clientId, conversationId, createdAt, duration, eventInstanceId, id, paymentStatus, serviceId, sourceData, staffId, startTime, status, timeZone, title, type);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -505,6 +561,7 @@ public class Booking1 {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Booking1 {\n");
+    sb.append("    autoReplyMessage: ").append(toIndentedString(autoReplyMessage)).append("\n");
     sb.append("    businessId: ").append(toIndentedString(businessId)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    conversationId: ").append(toIndentedString(conversationId)).append("\n");
@@ -512,6 +569,7 @@ public class Booking1 {
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("    eventInstanceId: ").append(toIndentedString(eventInstanceId)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    paymentStatus: ").append(toIndentedString(paymentStatus)).append("\n");
     sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
     sb.append("    sourceData: ").append(toIndentedString(sourceData)).append("\n");
     sb.append("    staffId: ").append(toIndentedString(staffId)).append("\n");
@@ -542,6 +600,7 @@ public class Booking1 {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("auto_reply_message");
     openapiFields.add("business_id");
     openapiFields.add("client_id");
     openapiFields.add("conversation_id");
@@ -549,6 +608,7 @@ public class Booking1 {
     openapiFields.add("duration");
     openapiFields.add("event_instance_id");
     openapiFields.add("id");
+    openapiFields.add("payment_status");
     openapiFields.add("service_id");
     openapiFields.add("source_data");
     openapiFields.add("staff_id");
