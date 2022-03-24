@@ -17,8 +17,8 @@ import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.GlobalAppointmentsGet200Response;
 import com.vcita.platform.client.model.SchedulingAppointmentsAppointmentIdGet200Response;
 import com.vcita.platform.client.model.SchedulingAppointmentsGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,52 +28,48 @@ import java.util.Map;
 /**
  * API tests for AppointmentsApi
  */
-@Ignore
+@Disabled
 public class AppointmentsApiTest {
 
     private final AppointmentsApi api = new AppointmentsApi();
 
-    
     /**
      * Get appointments list
      *
      * Get appointments list
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalAppointmentsGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalAppointmentsGet200Response response = api.globalAppointmentsGet(date, authorization, page);
+        GlobalAppointmentsGet200Response response = api.globalAppointmentsGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Get Appointment
      *
      * Get appointment
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void schedulingAppointmentsAppointmentIdGetTest() throws ApiException {
         String appointmentId = null;
         String authorization = null;
-                SchedulingAppointmentsAppointmentIdGet200Response response = api.schedulingAppointmentsAppointmentIdGet(appointmentId, authorization);
+        SchedulingAppointmentsAppointmentIdGet200Response response = api.schedulingAppointmentsAppointmentIdGet(appointmentId, authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Get Appointments List
      *
      * Get appointments list
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void schedulingAppointmentsGetTest() throws ApiException {
@@ -84,8 +80,8 @@ public class AppointmentsApiTest {
         String sort = null;
         Integer page = null;
         Integer perPage = null;
-                SchedulingAppointmentsGet200Response response = api.schedulingAppointmentsGet(authorization, businessId, clientId, state, sort, page, perPage);
+        SchedulingAppointmentsGet200Response response = api.schedulingAppointmentsGet(authorization, businessId, clientId, state, sort, page, perPage);
         // TODO: test validations
     }
-    
+
 }

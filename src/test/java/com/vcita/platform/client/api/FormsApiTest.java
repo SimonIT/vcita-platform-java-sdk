@@ -17,8 +17,8 @@ import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.FormsGet200Response;
 import com.vcita.platform.client.model.FormsPut200Response;
 import com.vcita.platform.client.model.InlineObject13;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,41 +28,38 @@ import java.util.Map;
 /**
  * API tests for FormsApi
  */
-@Ignore
+@Disabled
 public class FormsApiTest {
 
     private final FormsApi api = new FormsApi();
 
-    
     /**
      * Get Forms
      *
      * Gets all the forms of the business.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void formsGetTest() throws ApiException {
         String authorization = null;
-                FormsGet200Response response = api.formsGet(authorization);
+        FormsGet200Response response = api.formsGet(authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Updates a Form
      *
      * Update a Form.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void formsPutTest() throws ApiException {
         String authorization = null;
         InlineObject13 inlineObject13 = null;
-                FormsPut200Response response = api.formsPut(authorization, inlineObject13);
+        FormsPut200Response response = api.formsPut(authorization, inlineObject13);
         // TODO: test validations
     }
-    
+
 }

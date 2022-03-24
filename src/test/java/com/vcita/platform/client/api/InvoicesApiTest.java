@@ -19,8 +19,8 @@ import com.vcita.platform.client.model.InlineObject14;
 import com.vcita.platform.client.model.InvoicesGet201Response;
 import com.vcita.platform.client.model.InvoicesInvoiceIdGet201Response;
 import com.vcita.platform.client.model.InvoicesPost201Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,19 +30,15 @@ import java.util.Map;
 /**
  * API tests for InvoicesApi
  */
-@Ignore
+@Disabled
 public class InvoicesApiTest {
 
     private final InvoicesApi api = new InvoicesApi();
 
-    
     /**
      * Get Invoices Of Client
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void clientsClientIdInvoicesGetTest() throws ApiException {
@@ -52,17 +48,14 @@ public class InvoicesApiTest {
         String sort = null;
         String page = null;
         String perPage = null;
-                ClientsClientIdInvoicesGet201Response response = api.clientsClientIdInvoicesGet(authorization, clientId, filter, sort, page, perPage);
+        ClientsClientIdInvoicesGet201Response response = api.clientsClientIdInvoicesGet(authorization, clientId, filter, sort, page, perPage);
         // TODO: test validations
     }
-    
+
     /**
      * Get Invoices List
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void invoicesGetTest() throws ApiException {
@@ -71,40 +64,34 @@ public class InvoicesApiTest {
         String sort = null;
         String page = null;
         String perPage = null;
-                InvoicesGet201Response response = api.invoicesGet(authorization, filter, sort, page, perPage);
+        InvoicesGet201Response response = api.invoicesGet(authorization, filter, sort, page, perPage);
         // TODO: test validations
     }
-    
+
     /**
      * Get Invoice By ID
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void invoicesInvoiceIdGetTest() throws ApiException {
         String authorization = null;
         String invoiceId = null;
-                InvoicesInvoiceIdGet201Response response = api.invoicesInvoiceIdGet(authorization, invoiceId);
+        InvoicesInvoiceIdGet201Response response = api.invoicesInvoiceIdGet(authorization, invoiceId);
         // TODO: test validations
     }
-    
+
     /**
      * Create New Invoice
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void invoicesPostTest() throws ApiException {
         String authorization = null;
         InlineObject14 inlineObject14 = null;
-                InvoicesPost201Response response = api.invoicesPost(authorization, inlineObject14);
+        InvoicesPost201Response response = api.invoicesPost(authorization, inlineObject14);
         // TODO: test validations
     }
-    
+
 }

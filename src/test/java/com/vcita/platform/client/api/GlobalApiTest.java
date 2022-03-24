@@ -21,8 +21,8 @@ import com.vcita.platform.client.model.GlobalInvoicesGet200Response;
 import com.vcita.platform.client.model.GlobalMattersGet200Response;
 import com.vcita.platform.client.model.GlobalPackagesGet200Response;
 import com.vcita.platform.client.model.GlobalProductsGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,129 +32,121 @@ import java.util.Map;
 /**
  * API tests for GlobalApi
  */
-@Ignore
+@Disabled
 public class GlobalApiTest {
 
     private final GlobalApi api = new GlobalApi();
 
-    
     /**
      * Gets a list of client packages
      *
      * Gets a list of client packages
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalClientPackagesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalClientPackagesGet200Response response = api.globalClientPackagesGet(date, authorization, page);
+        GlobalClientPackagesGet200Response response = api.globalClientPackagesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of conversations
      *
      * Gets a list of conversations
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalConversationsGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalConversationsGet200Response response = api.globalConversationsGet(date, authorization, page);
+        GlobalConversationsGet200Response response = api.globalConversationsGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of estimates
      *
      * Gets a list of estimates
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalEstimatesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalEstimatesGet200Response response = api.globalEstimatesGet(date, authorization, page);
+        GlobalEstimatesGet200Response response = api.globalEstimatesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of invoices
      *
      * Gets a list of invoices
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalInvoicesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalInvoicesGet200Response response = api.globalInvoicesGet(date, authorization, page);
+        GlobalInvoicesGet200Response response = api.globalInvoicesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of matters
      *
      * Gets a list of matters
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalMattersGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalMattersGet200Response response = api.globalMattersGet(date, authorization, page);
+        GlobalMattersGet200Response response = api.globalMattersGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of packages
      *
      * Gets a list of packages
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalPackagesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalPackagesGet200Response response = api.globalPackagesGet(date, authorization, page);
+        GlobalPackagesGet200Response response = api.globalPackagesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of products
      *
      * Gets a list of products
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalProductsGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalProductsGet200Response response = api.globalProductsGet(date, authorization, page);
+        GlobalProductsGet200Response response = api.globalProductsGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
 }

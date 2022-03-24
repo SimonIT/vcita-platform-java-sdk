@@ -15,8 +15,8 @@ package com.vcita.platform.client.api;
 
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.CategoriesGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,19 +26,15 @@ import java.util.Map;
 /**
  * API tests for CategoriesApi
  */
-@Ignore
+@Disabled
 public class CategoriesApiTest {
 
     private final CategoriesApi api = new CategoriesApi();
 
-    
     /**
      * Get Categories [Alpha]
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void categoriesGetTest() throws ApiException {
@@ -46,8 +42,8 @@ public class CategoriesApiTest {
         String onlyVisibleServices = null;
         String hasFutureInstance = null;
         List<String> categoriesArray = null;
-                CategoriesGet200Response response = api.categoriesGet(businessId, onlyVisibleServices, hasFutureInstance, categoriesArray);
+        CategoriesGet200Response response = api.categoriesGet(businessId, onlyVisibleServices, hasFutureInstance, categoriesArray);
         // TODO: test validations
     }
-    
+
 }

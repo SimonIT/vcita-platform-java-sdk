@@ -26,8 +26,8 @@ import com.vcita.platform.client.model.PaymentClientPackagesPost201Response;
 import com.vcita.platform.client.model.PaymentClientPackagesPost422Response;
 import com.vcita.platform.client.model.PaymentClientPackagesUpdateUsagePost200Response;
 import com.vcita.platform.client.model.PaymentClientPackagesUpdateUsagePost422Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,19 +37,15 @@ import java.util.Map;
 /**
  * API tests for ClientPackagesApi
  */
-@Ignore
+@Disabled
 public class ClientPackagesApiTest {
 
     private final ClientPackagesApi api = new ClientPackagesApi();
 
-    
     /**
      * Get Client Packages List Of Client [Alpha]
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void clientsClientIdPaymentClientPackagesGetTest() throws ApiException {
@@ -57,72 +53,60 @@ public class ClientPackagesApiTest {
         String authorization = null;
         String page = null;
         String perPage = null;
-                ClientsClientIdPaymentClientPackagesGet200Response response = api.clientsClientIdPaymentClientPackagesGet(clientId, authorization, page, perPage);
+        ClientsClientIdPaymentClientPackagesGet200Response response = api.clientsClientIdPaymentClientPackagesGet(clientId, authorization, page, perPage);
         // TODO: test validations
     }
-    
+
     /**
      * Use Client Package Credit [Alpha]
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void clientsPaymentClientPackagesUpdateUsagePostTest() throws ApiException {
         String authorization = null;
         Body2 body2 = null;
-                ClientsPaymentClientPackagesUpdateUsagePost200Response response = api.clientsPaymentClientPackagesUpdateUsagePost(authorization, body2);
+        ClientsPaymentClientPackagesUpdateUsagePost200Response response = api.clientsPaymentClientPackagesUpdateUsagePost(authorization, body2);
         // TODO: test validations
     }
-    
+
     /**
      * Validate Client Package has redemption [Alpha]
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void clientsPaymentClientPackagesValidateGetTest() throws ApiException {
         String authorization = null;
         String paymentStatusId = null;
-                ClientsPaymentClientPackagesValidateGet200Response response = api.clientsPaymentClientPackagesValidateGet(authorization, paymentStatusId);
+        ClientsPaymentClientPackagesValidateGet200Response response = api.clientsPaymentClientPackagesValidateGet(authorization, paymentStatusId);
         // TODO: test validations
     }
-    
+
     /**
      * Add package to client [Alpha]
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentClientPackagesPostTest() throws ApiException {
         String authorization = null;
         InlineObject19 inlineObject19 = null;
-                PaymentClientPackagesPost201Response response = api.paymentClientPackagesPost(authorization, inlineObject19);
+        PaymentClientPackagesPost201Response response = api.paymentClientPackagesPost(authorization, inlineObject19);
         // TODO: test validations
     }
-    
+
     /**
      * Use Client Package Credit [Alpha]
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentClientPackagesUpdateUsagePostTest() throws ApiException {
         String authorization = null;
         Body2 body2 = null;
-                PaymentClientPackagesUpdateUsagePost200Response response = api.paymentClientPackagesUpdateUsagePost(authorization, body2);
+        PaymentClientPackagesUpdateUsagePost200Response response = api.paymentClientPackagesUpdateUsagePost(authorization, body2);
         // TODO: test validations
     }
-    
+
 }

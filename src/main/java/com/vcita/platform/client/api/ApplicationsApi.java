@@ -196,8 +196,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsGet201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsGet201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsGet201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -344,8 +344,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsIdAssignPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsIdAssignPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsIdAssignPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -491,8 +491,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsIdGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsIdGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsIdGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -643,8 +643,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsIdInstallAppPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsIdInstallAppPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsIdInstallAppPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -794,8 +794,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsIdPut200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsIdPut200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsIdPut200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -944,8 +944,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsIdUnassignPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsIdUnassignPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsIdUnassignPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -1097,8 +1097,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsIdUninstallAppPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsIdUninstallAppPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsIdUninstallAppPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -1239,8 +1239,8 @@ public class ApplicationsApi {
             Type localVarReturnType = new TypeToken<AppsPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AppsPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<AppsPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

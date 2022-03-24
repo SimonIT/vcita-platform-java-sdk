@@ -21,8 +21,8 @@ import com.vcita.platform.client.model.FieldsGet200Response;
 import com.vcita.platform.client.model.FieldsPost201Response;
 import com.vcita.platform.client.model.InlineObject11;
 import com.vcita.platform.client.model.InlineObject12;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,90 +32,84 @@ import java.util.Map;
 /**
  * API tests for FieldsApi
  */
-@Ignore
+@Disabled
 public class FieldsApiTest {
 
     private final FieldsApi api = new FieldsApi();
 
-    
     /**
      * Deletes a Field
      *
      * Deletes a Field
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void fieldsFieldIdDeleteTest() throws ApiException {
         String fieldId = null;
         String authorization = null;
-                FieldsFieldIdDelete200Response response = api.fieldsFieldIdDelete(fieldId, authorization);
+        FieldsFieldIdDelete200Response response = api.fieldsFieldIdDelete(fieldId, authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Get Field
      *
      * Gets the field
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void fieldsFieldIdGetTest() throws ApiException {
         String fieldId = null;
         String authorization = null;
-                FieldsFieldIdGet200Response response = api.fieldsFieldIdGet(fieldId, authorization);
+        FieldsFieldIdGet200Response response = api.fieldsFieldIdGet(fieldId, authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Updates a Field
      *
      * Updates a Field
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void fieldsFieldIdPutTest() throws ApiException {
         String fieldId = null;
         String authorization = null;
         InlineObject12 inlineObject12 = null;
-                FieldsFieldIdPut200Response response = api.fieldsFieldIdPut(fieldId, authorization, inlineObject12);
+        FieldsFieldIdPut200Response response = api.fieldsFieldIdPut(fieldId, authorization, inlineObject12);
         // TODO: test validations
     }
-    
+
     /**
      * Get all Fields
      *
      * Get all Fields
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void fieldsGetTest() throws ApiException {
         String authorization = null;
-                FieldsGet200Response response = api.fieldsGet(authorization);
+        FieldsGet200Response response = api.fieldsGet(authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Create a New Field
      *
      * Create a New Field
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void fieldsPostTest() throws ApiException {
         String authorization = null;
         InlineObject11 inlineObject11 = null;
-                FieldsPost201Response response = api.fieldsPost(authorization, inlineObject11);
+        FieldsPost201Response response = api.fieldsPost(authorization, inlineObject11);
         // TODO: test validations
     }
-    
+
 }

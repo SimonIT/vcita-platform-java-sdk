@@ -208,8 +208,8 @@ public class MattersApi {
             Type localVarReturnType = new TypeToken<ClientsMergesMergeClientsPut200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ClientsMergesMergeClientsPut200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ClientsMergesMergeClientsPut200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -358,8 +358,8 @@ public class MattersApi {
             Type localVarReturnType = new TypeToken<ClientsMergesPossibleMergeMasterGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ClientsMergesPossibleMergeMasterGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ClientsMergesPossibleMergeMasterGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

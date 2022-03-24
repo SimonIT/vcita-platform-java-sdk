@@ -195,8 +195,8 @@ public class WizardApi {
             Type localVarReturnType = new TypeToken<BusinessesBusinessIdWizardsGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<BusinessesBusinessIdWizardsGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<BusinessesBusinessIdWizardsGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -350,8 +350,8 @@ public class WizardApi {
             Type localVarReturnType = new TypeToken<BusinessesBusinessIdWizardsWizardNameGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<BusinessesBusinessIdWizardsWizardNameGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<BusinessesBusinessIdWizardsWizardNameGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -509,8 +509,8 @@ public class WizardApi {
             Type localVarReturnType = new TypeToken<BusinessesBusinessIdWizardsWizardNamePut200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<BusinessesBusinessIdWizardsWizardNamePut200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<BusinessesBusinessIdWizardsWizardNamePut200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

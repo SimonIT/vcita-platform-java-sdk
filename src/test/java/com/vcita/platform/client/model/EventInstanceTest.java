@@ -22,9 +22,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -42,11 +41,35 @@ public class EventInstanceTest {
     }
 
     /**
+     * Test the property 'businessUid'
+     */
+    @Test
+    public void businessUidTest() {
+        // TODO: test businessUid
+    }
+
+    /**
      * Test the property 'chargeType'
      */
     @Test
     public void chargeTypeTest() {
         // TODO: test chargeType
+    }
+
+    /**
+     * Test the property 'confirmedAttendees'
+     */
+    @Test
+    public void confirmedAttendeesTest() {
+        // TODO: test confirmedAttendees
+    }
+
+    /**
+     * Test the property 'createdAt'
+     */
+    @Test
+    public void createdAtTest() {
+        // TODO: test createdAt
     }
 
     /**
@@ -90,6 +113,22 @@ public class EventInstanceTest {
     }
 
     /**
+     * Test the property 'isFull'
+     */
+    @Test
+    public void isFullTest() {
+        // TODO: test isFull
+    }
+
+    /**
+     * Test the property 'maxAttendance'
+     */
+    @Test
+    public void maxAttendanceTest() {
+        // TODO: test maxAttendance
+    }
+
+    /**
      * Test the property 'price'
      */
     @Test
@@ -103,6 +142,14 @@ public class EventInstanceTest {
     @Test
     public void serviceIdTest() {
         // TODO: test serviceId
+    }
+
+    /**
+     * Test the property 'spotsOpen'
+     */
+    @Test
+    public void spotsOpenTest() {
+        // TODO: test spotsOpen
     }
 
     /**
@@ -143,6 +190,30 @@ public class EventInstanceTest {
     @Test
     public void uidTest() {
         // TODO: test uid
+    }
+
+    /**
+     * Test the property 'updatedAt'
+     */
+    @Test
+    public void updatedAtTest() {
+        // TODO: test updatedAt
+    }
+
+    /**
+     * Test the property 'waitlist'
+     */
+    @Test
+    public void waitlistTest() {
+        // TODO: test waitlist
+    }
+
+    /**
+     * Test the property 'waitlistCount'
+     */
+    @Test
+    public void waitlistCountTest() {
+        // TODO: test waitlistCount
     }
 
 }

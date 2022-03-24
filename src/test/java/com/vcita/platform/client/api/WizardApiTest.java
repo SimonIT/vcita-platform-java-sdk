@@ -18,8 +18,8 @@ import com.vcita.platform.client.model.BusinessesBusinessIdWizardsGet200Response
 import com.vcita.platform.client.model.BusinessesBusinessIdWizardsWizardNameGet200Response;
 import com.vcita.platform.client.model.BusinessesBusinessIdWizardsWizardNamePut200Response;
 import com.vcita.platform.client.model.InlineObject7;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,52 +29,48 @@ import java.util.Map;
 /**
  * API tests for WizardApi
  */
-@Ignore
+@Disabled
 public class WizardApiTest {
 
     private final WizardApi api = new WizardApi();
 
-    
     /**
      * Gets a list of wizards
      *
      * Gets a list of available wizards
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesBusinessIdWizardsGetTest() throws ApiException {
         String businessId = null;
         String authorization = null;
-                BusinessesBusinessIdWizardsGet200Response response = api.businessesBusinessIdWizardsGet(businessId, authorization);
+        BusinessesBusinessIdWizardsGet200Response response = api.businessesBusinessIdWizardsGet(businessId, authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a wizard by name
      *
      * Gets a wizard by given name
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesBusinessIdWizardsWizardNameGetTest() throws ApiException {
         String businessId = null;
         String wizardName = null;
         String authorization = null;
-                BusinessesBusinessIdWizardsWizardNameGet200Response response = api.businessesBusinessIdWizardsWizardNameGet(businessId, wizardName, authorization);
+        BusinessesBusinessIdWizardsWizardNameGet200Response response = api.businessesBusinessIdWizardsWizardNameGet(businessId, wizardName, authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Update a wizard
      *
      * Update a wizard with given name
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesBusinessIdWizardsWizardNamePutTest() throws ApiException {
@@ -82,8 +78,8 @@ public class WizardApiTest {
         String wizardName = null;
         String authorization = null;
         InlineObject7 inlineObject7 = null;
-                BusinessesBusinessIdWizardsWizardNamePut200Response response = api.businessesBusinessIdWizardsWizardNamePut(businessId, wizardName, authorization, inlineObject7);
+        BusinessesBusinessIdWizardsWizardNamePut200Response response = api.businessesBusinessIdWizardsWizardNamePut(businessId, wizardName, authorization, inlineObject7);
         // TODO: test validations
     }
-    
+
 }

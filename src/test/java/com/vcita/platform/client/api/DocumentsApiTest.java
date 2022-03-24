@@ -15,8 +15,8 @@ package com.vcita.platform.client.api;
 
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.ClientsClientIdDocumentsGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,26 +26,24 @@ import java.util.Map;
 /**
  * API tests for DocumentsApi
  */
-@Ignore
+@Disabled
 public class DocumentsApiTest {
 
     private final DocumentsApi api = new DocumentsApi();
 
-    
     /**
      * Get Documents For A Client
      *
      * Gets a list of documents for a client
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void clientsClientIdDocumentsGetTest() throws ApiException {
         String clientId = null;
         String authorization = null;
-                ClientsClientIdDocumentsGet200Response response = api.clientsClientIdDocumentsGet(clientId, authorization);
+        ClientsClientIdDocumentsGet200Response response = api.clientsClientIdDocumentsGet(clientId, authorization);
         // TODO: test validations
     }
-    
+
 }

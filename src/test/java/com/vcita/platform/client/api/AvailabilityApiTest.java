@@ -15,8 +15,8 @@ package com.vcita.platform.client.api;
 
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.ServicesServiceIdAvailabilityGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,19 +26,17 @@ import java.util.Map;
 /**
  * API tests for AvailabilityApi
  */
-@Ignore
+@Disabled
 public class AvailabilityApiTest {
 
     private final AvailabilityApi api = new AvailabilityApi();
 
-    
     /**
      * Get Service availability By ID [Alpha]
      *
      * Get Service availability By ID [Alpha]
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void servicesServiceIdAvailabilityGetTest() throws ApiException {
@@ -49,8 +47,8 @@ public class AvailabilityApiTest {
         String timeZone = null;
         String includeDst = null;
         List<String> staffIdsArray = null;
-                ServicesServiceIdAvailabilityGet200Response response = api.servicesServiceIdAvailabilityGet(serviceId, startDate, endDate, authorization, timeZone, includeDst, staffIdsArray);
+        ServicesServiceIdAvailabilityGet200Response response = api.servicesServiceIdAvailabilityGet(serviceId, startDate, endDate, authorization, timeZone, includeDst, staffIdsArray);
         // TODO: test validations
     }
-    
+
 }

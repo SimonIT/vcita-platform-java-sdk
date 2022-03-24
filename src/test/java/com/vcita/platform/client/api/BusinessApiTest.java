@@ -24,8 +24,8 @@ import com.vcita.platform.client.model.BusinessesValidateLoginGet200Response;
 import com.vcita.platform.client.model.GlobalBusinessesGet200Response;
 import com.vcita.platform.client.model.InlineObject4;
 import com.vcita.platform.client.model.InlineObject5;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,126 +35,112 @@ import java.util.Map;
 /**
  * API tests for BusinessApi
  */
-@Ignore
+@Disabled
 public class BusinessApiTest {
 
     private final BusinessApi api = new BusinessApi();
 
-    
     /**
      * Get Business Features
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesBusinessIdFeaturesGetTest() throws ApiException {
         String authorization = null;
         String businessId = null;
-                BusinessesBusinessIdFeaturesGet200Response response = api.businessesBusinessIdFeaturesGet(authorization, businessId);
+        BusinessesBusinessIdFeaturesGet200Response response = api.businessesBusinessIdFeaturesGet(authorization, businessId);
         // TODO: test validations
     }
-    
+
     /**
      * Get Business
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesBusinessIdGetTest() throws ApiException {
         String authorization = null;
         String businessId = null;
-                BusinessesBusinessIdGet200Response response = api.businessesBusinessIdGet(authorization, businessId);
+        BusinessesBusinessIdGet200Response response = api.businessesBusinessIdGet(authorization, businessId);
         // TODO: test validations
     }
-    
+
     /**
      * Update Business
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesBusinessIdPostTest() throws ApiException {
         String authorization = null;
         String businessId = null;
         InlineObject5 inlineObject5 = null;
-                BusinessesBusinessIdPost200Response response = api.businessesBusinessIdPost(authorization, businessId, inlineObject5);
+        BusinessesBusinessIdPost200Response response = api.businessesBusinessIdPost(authorization, businessId, inlineObject5);
         // TODO: test validations
     }
-    
+
     /**
      * Get Business filtered by email or external_id
      *
      * Retrieves a business by email or external_id. One of email or external ID is required.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesGetTest() throws ApiException {
         String authorization = null;
         String email = null;
         String externalId = null;
-                BusinessesGet200Response response = api.businessesGet(authorization, email, externalId);
+        BusinessesGet200Response response = api.businessesGet(authorization, email, externalId);
         // TODO: test validations
     }
-    
+
     /**
      * Create a Business
      *
      * Creates a Business.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesPostTest() throws ApiException {
         String authorization = null;
         InlineObject4 inlineObject4 = null;
-                BusinessesPost200Response response = api.businessesPost(authorization, inlineObject4);
+        BusinessesPost200Response response = api.businessesPost(authorization, inlineObject4);
         // TODO: test validations
     }
-    
+
     /**
      * Validate Login
      *
      * Validates username/password credentials for login. The API will be blocked for the username after 5 failed attempts.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void businessesValidateLoginGetTest() throws ApiException {
         String authorization = null;
         String username = null;
         String password = null;
-                BusinessesValidateLoginGet200Response response = api.businessesValidateLoginGet(authorization, username, password);
+        BusinessesValidateLoginGet200Response response = api.businessesValidateLoginGet(authorization, username, password);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of businesses
      *
      * Gets a list of businesses
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalBusinessesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalBusinessesGet200Response response = api.globalBusinessesGet(date, authorization, page);
+        GlobalBusinessesGet200Response response = api.globalBusinessesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
 }

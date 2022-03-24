@@ -23,13 +23,13 @@ import com.vcita.platform.client.model.SourceData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.net.URI;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -52,6 +52,14 @@ public class BookingTest {
     @Test
     public void approvalModeTest() {
         // TODO: test approvalMode
+    }
+
+    /**
+     * Test the property 'calendarStartTime'
+     */
+    @Test
+    public void calendarStartTimeTest() {
+        // TODO: test calendarStartTime
     }
 
     /**
@@ -228,6 +236,14 @@ public class BookingTest {
     @Test
     public void policiesTest() {
         // TODO: test policies
+    }
+
+    /**
+     * Test the property 'policy'
+     */
+    @Test
+    public void policyTest() {
+        // TODO: test policy
     }
 
     /**

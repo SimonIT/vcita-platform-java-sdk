@@ -202,8 +202,8 @@ public class EventAttendanceApi {
             Type localVarReturnType = new TypeToken<GlobalEventAttendancesGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalEventAttendancesGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<GlobalEventAttendancesGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

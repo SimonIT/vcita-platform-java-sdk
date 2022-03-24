@@ -18,8 +18,8 @@ import com.vcita.platform.client.model.ClientsClientIdEstimatesGet200Response;
 import com.vcita.platform.client.model.EstimatesGet200Response;
 import com.vcita.platform.client.model.EstimatesPost201Response;
 import com.vcita.platform.client.model.InlineObject10;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,19 +29,15 @@ import java.util.Map;
 /**
  * API tests for EstimatesApi
  */
-@Ignore
+@Disabled
 public class EstimatesApiTest {
 
     private final EstimatesApi api = new EstimatesApi();
 
-    
     /**
      * Get Estimates Of Client
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void clientsClientIdEstimatesGetTest() throws ApiException {
@@ -49,17 +45,14 @@ public class EstimatesApiTest {
         String authorization = null;
         String filter = null;
         String sort = null;
-                ClientsClientIdEstimatesGet200Response response = api.clientsClientIdEstimatesGet(clientId, authorization, filter, sort);
+        ClientsClientIdEstimatesGet200Response response = api.clientsClientIdEstimatesGet(clientId, authorization, filter, sort);
         // TODO: test validations
     }
-    
+
     /**
      * Get Estimates List
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void estimatesGetTest() throws ApiException {
@@ -68,24 +61,21 @@ public class EstimatesApiTest {
         String sort = null;
         String page = null;
         String perPage = null;
-                EstimatesGet200Response response = api.estimatesGet(authorization, filter, sort, page, perPage);
+        EstimatesGet200Response response = api.estimatesGet(authorization, filter, sort, page, perPage);
         // TODO: test validations
     }
-    
+
     /**
      * Create New Estimate
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void estimatesPostTest() throws ApiException {
         String authorization = null;
         InlineObject10 inlineObject10 = null;
-                EstimatesPost201Response response = api.estimatesPost(authorization, inlineObject10);
+        EstimatesPost201Response response = api.estimatesPost(authorization, inlineObject10);
         // TODO: test validations
     }
-    
+
 }

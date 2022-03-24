@@ -203,8 +203,8 @@ public class EventInstanceApi {
             Type localVarReturnType = new TypeToken<GlobalEventInstancesGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalEventInstancesGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<GlobalEventInstancesGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -350,8 +350,8 @@ public class EventInstanceApi {
             Type localVarReturnType = new TypeToken<SchedulingEventInstanceEventInstanceIdGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingEventInstanceEventInstanceIdGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingEventInstanceEventInstanceIdGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

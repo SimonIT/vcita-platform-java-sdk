@@ -44,10 +44,14 @@ import java.util.Set;
 import com.vcita.platform.client.JSON;
 
 /**
- * PaymentStatusesIdValidateCouponGet422Response
+ * Error1
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class PaymentStatusesIdValidateCouponGet422Response {
+public class Error1 {
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  private String status;
+
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
   private String error;
@@ -56,60 +60,10 @@ public class PaymentStatusesIdValidateCouponGet422Response {
   @SerializedName(SERIALIZED_NAME_ERROR_CODE)
   private String errorCode;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
-  private String status;
-
-  public PaymentStatusesIdValidateCouponGet422Response() { 
+  public Error1() { 
   }
 
-  public PaymentStatusesIdValidateCouponGet422Response error(String error) {
-    
-    this.error = error;
-    return this;
-  }
-
-   /**
-   * Get error
-   * @return error
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getError() {
-    return error;
-  }
-
-
-  public void setError(String error) {
-    this.error = error;
-  }
-
-
-  public PaymentStatusesIdValidateCouponGet422Response errorCode(String errorCode) {
-    
-    this.errorCode = errorCode;
-    return this;
-  }
-
-   /**
-   * Get errorCode
-   * @return errorCode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getErrorCode() {
-    return errorCode;
-  }
-
-
-  public void setErrorCode(String errorCode) {
-    this.errorCode = errorCode;
-  }
-
-
-  public PaymentStatusesIdValidateCouponGet422Response status(String status) {
+  public Error1 status(String status) {
     
     this.status = status;
     return this;
@@ -132,6 +86,52 @@ public class PaymentStatusesIdValidateCouponGet422Response {
   }
 
 
+  public Error1 error(String error) {
+    
+    this.error = error;
+    return this;
+  }
+
+   /**
+   * Get error
+   * @return error
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getError() {
+    return error;
+  }
+
+
+  public void setError(String error) {
+    this.error = error;
+  }
+
+
+  public Error1 errorCode(String errorCode) {
+    
+    this.errorCode = errorCode;
+    return this;
+  }
+
+   /**
+   * Get errorCode
+   * @return errorCode
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getErrorCode() {
+    return errorCode;
+  }
+
+
+  public void setErrorCode(String errorCode) {
+    this.errorCode = errorCode;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -140,24 +140,24 @@ public class PaymentStatusesIdValidateCouponGet422Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PaymentStatusesIdValidateCouponGet422Response paymentStatusesIdValidateCouponGet422Response = (PaymentStatusesIdValidateCouponGet422Response) o;
-    return Objects.equals(this.error, paymentStatusesIdValidateCouponGet422Response.error) &&
-        Objects.equals(this.errorCode, paymentStatusesIdValidateCouponGet422Response.errorCode) &&
-        Objects.equals(this.status, paymentStatusesIdValidateCouponGet422Response.status);
+    Error1 error1 = (Error1) o;
+    return Objects.equals(this.status, error1.status) &&
+        Objects.equals(this.error, error1.error) &&
+        Objects.equals(this.errorCode, error1.errorCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(error, errorCode, status);
+    return Objects.hash(status, error, errorCode);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PaymentStatusesIdValidateCouponGet422Response {\n");
+    sb.append("class Error1 {\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -180,9 +180,9 @@ public class PaymentStatusesIdValidateCouponGet422Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("status");
     openapiFields.add("error");
     openapiFields.add("error_code");
-    openapiFields.add("status");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -192,21 +192,21 @@ public class PaymentStatusesIdValidateCouponGet422Response {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to PaymentStatusesIdValidateCouponGet422Response
+  * @throws IOException if the JSON Object is invalid with respect to Error1
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (PaymentStatusesIdValidateCouponGet422Response.openapiRequiredFields.isEmpty()) {
+        if (Error1.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in PaymentStatusesIdValidateCouponGet422Response is not found in the empty JSON string", PaymentStatusesIdValidateCouponGet422Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Error1 is not found in the empty JSON string", Error1.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!PaymentStatusesIdValidateCouponGet422Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PaymentStatusesIdValidateCouponGet422Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!Error1.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Error1` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
   }
@@ -215,22 +215,22 @@ public class PaymentStatusesIdValidateCouponGet422Response {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!PaymentStatusesIdValidateCouponGet422Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'PaymentStatusesIdValidateCouponGet422Response' and its subtypes
+       if (!Error1.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'Error1' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<PaymentStatusesIdValidateCouponGet422Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(PaymentStatusesIdValidateCouponGet422Response.class));
+       final TypeAdapter<Error1> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(Error1.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<PaymentStatusesIdValidateCouponGet422Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<Error1>() {
            @Override
-           public void write(JsonWriter out, PaymentStatusesIdValidateCouponGet422Response value) throws IOException {
+           public void write(JsonWriter out, Error1 value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public PaymentStatusesIdValidateCouponGet422Response read(JsonReader in) throws IOException {
+           public Error1 read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -241,18 +241,18 @@ public class PaymentStatusesIdValidateCouponGet422Response {
   }
 
  /**
-  * Create an instance of PaymentStatusesIdValidateCouponGet422Response given an JSON string
+  * Create an instance of Error1 given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of PaymentStatusesIdValidateCouponGet422Response
-  * @throws IOException if the JSON string is invalid with respect to PaymentStatusesIdValidateCouponGet422Response
+  * @return An instance of Error1
+  * @throws IOException if the JSON string is invalid with respect to Error1
   */
-  public static PaymentStatusesIdValidateCouponGet422Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, PaymentStatusesIdValidateCouponGet422Response.class);
+  public static Error1 fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Error1.class);
   }
 
  /**
-  * Convert an instance of PaymentStatusesIdValidateCouponGet422Response to an JSON string
+  * Convert an instance of Error1 to an JSON string
   *
   * @return JSON string
   */

@@ -17,8 +17,8 @@ import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.InlineObject32;
 import com.vcita.platform.client.model.InlineObject33;
 import com.vcita.platform.client.model.InlineResponse200;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,58 +28,50 @@ import java.util.Map;
 /**
  * API tests for WebhooksApi
  */
-@Ignore
+@Disabled
 public class WebhooksApiTest {
 
     private final WebhooksApi api = new WebhooksApi();
 
-    
     /**
      * Subscribe To Webhook
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void webhookSubscribePostTest() throws ApiException {
         String authorization = null;
         InlineObject32 inlineObject32 = null;
-                api.webhookSubscribePost(authorization, inlineObject32);
+        api.webhookSubscribePost(authorization, inlineObject32);
         // TODO: test validations
     }
-    
+
     /**
      * Unsubscribe from Webhook
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void webhookUnsubscribePostTest() throws ApiException {
         String authorization = null;
         InlineObject33 inlineObject33 = null;
-                api.webhookUnsubscribePost(authorization, inlineObject33);
+        api.webhookUnsubscribePost(authorization, inlineObject33);
         // TODO: test validations
     }
-    
+
     /**
      * Get Webhooks List
      *
      * Get appointment
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void webhooksGetTest() throws ApiException {
         String authorization = null;
         String filter = null;
-                InlineResponse200 response = api.webhooksGet(authorization, filter);
+        InlineResponse200 response = api.webhooksGet(authorization, filter);
         // TODO: test validations
     }
-    
+
 }

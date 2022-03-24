@@ -21,23 +21,30 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for PaymentStatusesIdApplyCouponPut422Response
+ * Model tests for Error1
  */
-public class PaymentStatusesIdApplyCouponPut422ResponseTest {
-    private final PaymentStatusesIdApplyCouponPut422Response model = new PaymentStatusesIdApplyCouponPut422Response();
+public class Error1Test {
+    private final Error1 model = new Error1();
 
     /**
-     * Model tests for PaymentStatusesIdApplyCouponPut422Response
+     * Model tests for Error1
      */
     @Test
-    public void testPaymentStatusesIdApplyCouponPut422Response() {
-        // TODO: test PaymentStatusesIdApplyCouponPut422Response
+    public void testError1() {
+        // TODO: test Error1
+    }
+
+    /**
+     * Test the property 'status'
+     */
+    @Test
+    public void statusTest() {
+        // TODO: test status
     }
 
     /**
@@ -54,14 +61,6 @@ public class PaymentStatusesIdApplyCouponPut422ResponseTest {
     @Test
     public void errorCodeTest() {
         // TODO: test errorCode
-    }
-
-    /**
-     * Test the property 'status'
-     */
-    @Test
-    public void statusTest() {
-        // TODO: test status
     }
 
 }

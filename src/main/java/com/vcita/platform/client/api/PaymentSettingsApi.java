@@ -185,8 +185,8 @@ public class PaymentSettingsApi {
             Type localVarReturnType = new TypeToken<PaymentSettingsGet201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PaymentSettingsGet201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PaymentSettingsGet201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -324,8 +324,8 @@ public class PaymentSettingsApi {
             Type localVarReturnType = new TypeToken<PaymentSettingsPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PaymentSettingsPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PaymentSettingsPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

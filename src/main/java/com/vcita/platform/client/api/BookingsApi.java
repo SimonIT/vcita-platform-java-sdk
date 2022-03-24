@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.vcita.platform.client.model.Booking;
+import com.vcita.platform.client.model.Error1;
 import com.vcita.platform.client.model.InlineObject25;
 import com.vcita.platform.client.model.InlineObject26;
 import com.vcita.platform.client.model.InlineObject27;
@@ -35,7 +36,6 @@ import com.vcita.platform.client.model.InlineObject28;
 import com.vcita.platform.client.model.InlineObject29;
 import com.vcita.platform.client.model.SchedulingBookingsBookingUidUpdateRsvpStatePut200Response;
 import com.vcita.platform.client.model.SchedulingBookingsPost201Response;
-import com.vcita.platform.client.model.SchedulingBookingsPost422Response;
 import com.vcita.platform.client.model.SchedulingWaitlistCancelPut200Response;
 import com.vcita.platform.client.model.SchedulingWaitlistPost201Response;
 import com.vcita.platform.client.model.SchedulingWaitlistPost422Response;
@@ -218,8 +218,8 @@ public class BookingsApi {
             Type localVarReturnType = new TypeToken<SchedulingBookingsBookingUidUpdateRsvpStatePut200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingBookingsBookingUidUpdateRsvpStatePut200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingBookingsBookingUidUpdateRsvpStatePut200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -360,8 +360,8 @@ public class BookingsApi {
             Type localVarReturnType = new TypeToken<Booking>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Booking>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Booking>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -561,8 +561,8 @@ public class BookingsApi {
             Type localVarReturnType = new TypeToken<List<Booking>>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<Booking>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<Booking>>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -710,8 +710,8 @@ public class BookingsApi {
             Type localVarReturnType = new TypeToken<SchedulingBookingsPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingBookingsPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingBookingsPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -851,8 +851,8 @@ public class BookingsApi {
             Type localVarReturnType = new TypeToken<SchedulingWaitlistCancelPut200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingWaitlistCancelPut200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingWaitlistCancelPut200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -994,8 +994,8 @@ public class BookingsApi {
             Type localVarReturnType = new TypeToken<SchedulingWaitlistPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingWaitlistPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingWaitlistPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

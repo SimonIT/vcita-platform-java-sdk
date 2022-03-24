@@ -16,8 +16,8 @@ package com.vcita.platform.client.api;
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.GlobalEventInstancesGet200Response;
 import com.vcita.platform.client.model.SchedulingEventInstanceEventInstanceIdGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,43 +27,40 @@ import java.util.Map;
 /**
  * API tests for EventInstanceApi
  */
-@Ignore
+@Disabled
 public class EventInstanceApiTest {
 
     private final EventInstanceApi api = new EventInstanceApi();
 
-    
     /**
      * Gets a list of event instances
      *
      * Gets a list of event instances
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalEventInstancesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalEventInstancesGet200Response response = api.globalEventInstancesGet(date, authorization, page);
+        GlobalEventInstancesGet200Response response = api.globalEventInstancesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Get Event Instance
      *
      * Get Event Instance Details.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void schedulingEventInstanceEventInstanceIdGetTest() throws ApiException {
         String authorization = null;
         String eventInstanceId = null;
-                SchedulingEventInstanceEventInstanceIdGet200Response response = api.schedulingEventInstanceEventInstanceIdGet(authorization, eventInstanceId);
+        SchedulingEventInstanceEventInstanceIdGet200Response response = api.schedulingEventInstanceEventInstanceIdGet(authorization, eventInstanceId);
         // TODO: test validations
     }
-    
+
 }

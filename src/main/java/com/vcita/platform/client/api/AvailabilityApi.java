@@ -237,8 +237,8 @@ public class AvailabilityApi {
             Type localVarReturnType = new TypeToken<ServicesServiceIdAvailabilityGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ServicesServiceIdAvailabilityGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ServicesServiceIdAvailabilityGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

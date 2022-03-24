@@ -24,9 +24,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -41,6 +40,14 @@ public class Booking1Test {
     @Test
     public void testBooking1() {
         // TODO: test Booking1
+    }
+
+    /**
+     * Test the property 'autoReplyMessage'
+     */
+    @Test
+    public void autoReplyMessageTest() {
+        // TODO: test autoReplyMessage
     }
 
     /**
@@ -97,6 +104,14 @@ public class Booking1Test {
     @Test
     public void idTest() {
         // TODO: test id
+    }
+
+    /**
+     * Test the property 'paymentStatus'
+     */
+    @Test
+    public void paymentStatusTest() {
+        // TODO: test paymentStatus
     }
 
     /**

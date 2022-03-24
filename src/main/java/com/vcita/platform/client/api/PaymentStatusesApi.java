@@ -27,10 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.vcita.platform.client.model.Error1;
 import com.vcita.platform.client.model.PaymentStatusesIdApplyCouponPut200Response;
-import com.vcita.platform.client.model.PaymentStatusesIdApplyCouponPut422Response;
 import com.vcita.platform.client.model.PaymentStatusesIdValidateCouponGet200Response;
-import com.vcita.platform.client.model.PaymentStatusesIdValidateCouponGet422Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -198,8 +197,8 @@ public class PaymentStatusesApi {
             Type localVarReturnType = new TypeToken<PaymentStatusesIdApplyCouponPut200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PaymentStatusesIdApplyCouponPut200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PaymentStatusesIdApplyCouponPut200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -348,8 +347,8 @@ public class PaymentStatusesApi {
             Type localVarReturnType = new TypeToken<PaymentStatusesIdValidateCouponGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PaymentStatusesIdValidateCouponGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PaymentStatusesIdValidateCouponGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

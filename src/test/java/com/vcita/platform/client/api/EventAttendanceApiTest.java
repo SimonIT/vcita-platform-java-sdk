@@ -15,8 +15,8 @@ package com.vcita.platform.client.api;
 
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.GlobalEventAttendancesGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,27 +26,25 @@ import java.util.Map;
 /**
  * API tests for EventAttendanceApi
  */
-@Ignore
+@Disabled
 public class EventAttendanceApiTest {
 
     private final EventAttendanceApi api = new EventAttendanceApi();
 
-    
     /**
      * Gets a list of event attendances
      *
      * Gets a list of event attendances
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalEventAttendancesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalEventAttendancesGet200Response response = api.globalEventAttendancesGet(date, authorization, page);
+        GlobalEventAttendancesGet200Response response = api.globalEventAttendancesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
 }

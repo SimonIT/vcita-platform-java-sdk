@@ -19,8 +19,8 @@ import com.vcita.platform.client.model.InlineObject31;
 import com.vcita.platform.client.model.TokensGet201Response;
 import com.vcita.platform.client.model.TokensPost201Response;
 import com.vcita.platform.client.model.TokensRevokePost201Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,59 +30,51 @@ import java.util.Map;
 /**
  * API tests for TokenManagementApi
  */
-@Ignore
+@Disabled
 public class TokenManagementApiTest {
 
     private final TokenManagementApi api = new TokenManagementApi();
 
-    
     /**
      * Get tokens
      *
      * Gets a list of tokens.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void tokensGetTest() throws ApiException {
         String authorization = null;
         String appId = null;
         String userId = null;
-                TokensGet201Response response = api.tokensGet(authorization, appId, userId);
+        TokensGet201Response response = api.tokensGet(authorization, appId, userId);
         // TODO: test validations
     }
-    
+
     /**
      * Creates a token
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void tokensPostTest() throws ApiException {
         String authorization = null;
         InlineObject30 inlineObject30 = null;
-                TokensPost201Response response = api.tokensPost(authorization, inlineObject30);
+        TokensPost201Response response = api.tokensPost(authorization, inlineObject30);
         // TODO: test validations
     }
-    
+
     /**
      * Revokes a token
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void tokensRevokePostTest() throws ApiException {
         String authorization = null;
         InlineObject31 inlineObject31 = null;
-                TokensRevokePost201Response response = api.tokensRevokePost(authorization, inlineObject31);
+        TokensRevokePost201Response response = api.tokensRevokePost(authorization, inlineObject31);
         // TODO: test validations
     }
-    
+
 }

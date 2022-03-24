@@ -17,8 +17,8 @@ import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.InlineObject18;
 import com.vcita.platform.client.model.PaymentCheckoutPut201Response;
 import com.vcita.platform.client.model.PaymentCheckoutUrlKeyGet201Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,42 +28,37 @@ import java.util.Map;
 /**
  * API tests for PaymentCheckoutApi
  */
-@Ignore
+@Disabled
 public class PaymentCheckoutApiTest {
 
     private final PaymentCheckoutApi api = new PaymentCheckoutApi();
 
-    
     /**
      * Send checkout update by webhook 
      *
      * Update a checkout process from webhook
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentCheckoutPutTest() throws ApiException {
         String authorization = null;
         InlineObject18 inlineObject18 = null;
-                PaymentCheckoutPut201Response response = api.paymentCheckoutPut(authorization, inlineObject18);
+        PaymentCheckoutPut201Response response = api.paymentCheckoutPut(authorization, inlineObject18);
         // TODO: test validations
     }
-    
+
     /**
      * Get Open Checkout For Specific url_key
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentCheckoutUrlKeyGetTest() throws ApiException {
         String authorization = null;
         String urlKey = null;
-                PaymentCheckoutUrlKeyGet201Response response = api.paymentCheckoutUrlKeyGet(authorization, urlKey);
+        PaymentCheckoutUrlKeyGet201Response response = api.paymentCheckoutUrlKeyGet(authorization, urlKey);
         // TODO: test validations
     }
-    
+
 }

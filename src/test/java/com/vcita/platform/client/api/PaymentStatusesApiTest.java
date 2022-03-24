@@ -14,12 +14,11 @@
 package com.vcita.platform.client.api;
 
 import com.vcita.platform.client.ApiException;
+import com.vcita.platform.client.model.Error1;
 import com.vcita.platform.client.model.PaymentStatusesIdApplyCouponPut200Response;
-import com.vcita.platform.client.model.PaymentStatusesIdApplyCouponPut422Response;
 import com.vcita.platform.client.model.PaymentStatusesIdValidateCouponGet200Response;
-import com.vcita.platform.client.model.PaymentStatusesIdValidateCouponGet422Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,42 +28,35 @@ import java.util.Map;
 /**
  * API tests for PaymentStatusesApi
  */
-@Ignore
+@Disabled
 public class PaymentStatusesApiTest {
 
     private final PaymentStatusesApi api = new PaymentStatusesApi();
 
-    
     /**
      * Apply Coupon
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentStatusesIdApplyCouponPutTest() throws ApiException {
         String id = null;
         String couponCode = null;
-                PaymentStatusesIdApplyCouponPut200Response response = api.paymentStatusesIdApplyCouponPut(id, couponCode);
+        PaymentStatusesIdApplyCouponPut200Response response = api.paymentStatusesIdApplyCouponPut(id, couponCode);
         // TODO: test validations
     }
-    
+
     /**
      * Validate Coupon
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentStatusesIdValidateCouponGetTest() throws ApiException {
         String id = null;
         String couponCode = null;
-                PaymentStatusesIdValidateCouponGet200Response response = api.paymentStatusesIdValidateCouponGet(id, couponCode);
+        PaymentStatusesIdValidateCouponGet200Response response = api.paymentStatusesIdValidateCouponGet(id, couponCode);
         // TODO: test validations
     }
-    
+
 }

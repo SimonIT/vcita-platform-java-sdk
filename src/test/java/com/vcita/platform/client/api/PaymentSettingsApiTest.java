@@ -17,8 +17,8 @@ import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.InlineObject22;
 import com.vcita.platform.client.model.PaymentSettingsGet201Response;
 import com.vcita.platform.client.model.PaymentSettingsPost201Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,41 +28,34 @@ import java.util.Map;
 /**
  * API tests for PaymentSettingsApi
  */
-@Ignore
+@Disabled
 public class PaymentSettingsApiTest {
 
     private final PaymentSettingsApi api = new PaymentSettingsApi();
 
-    
     /**
      * Get Current Payment Settings
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentSettingsGetTest() throws ApiException {
         String authorization = null;
-                PaymentSettingsGet201Response response = api.paymentSettingsGet(authorization);
+        PaymentSettingsGet201Response response = api.paymentSettingsGet(authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Update Payment Settings
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentSettingsPostTest() throws ApiException {
         String authorization = null;
         InlineObject22 inlineObject22 = null;
-                PaymentSettingsPost201Response response = api.paymentSettingsPost(authorization, inlineObject22);
+        PaymentSettingsPost201Response response = api.paymentSettingsPost(authorization, inlineObject22);
         // TODO: test validations
     }
-    
+
 }

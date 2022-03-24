@@ -3404,6 +3404,20 @@
         },
         "type": "object"
       },
+      "error1": {
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "error_code": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "estimate": {
         "properties": {
           "address": {
@@ -4688,38 +4702,10 @@
         },
         "type": "object"
       },
-      "payment_statuses_id_apply_coupon_put_422_response": {
-        "properties": {
-          "error": {
-            "type": "string"
-          },
-          "error_code": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          }
-        },
-        "type": "object"
-      },
       "payment_statuses_id_validate_coupon_get_200_response": {
         "properties": {
           "data": {
             "$ref": "#/components/schemas/data34"
-          },
-          "status": {
-            "type": "string"
-          }
-        },
-        "type": "object"
-      },
-      "payment_statuses_id_validate_coupon_get_422_response": {
-        "properties": {
-          "error": {
-            "type": "string"
-          },
-          "error_code": {
-            "type": "string"
           },
           "status": {
             "type": "string"
@@ -4890,20 +4876,6 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/data40"
-          },
-          "status": {
-            "type": "string"
-          }
-        },
-        "type": "object"
-      },
-      "scheduling_bookings_post_422_response": {
-        "properties": {
-          "error": {
-            "type": "string"
-          },
-          "error_code": {
-            "type": "string"
           },
           "status": {
             "type": "string"
@@ -15695,7 +15667,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/payment_statuses_id_apply_coupon_put_422_response"
+                  "$ref": "#/components/schemas/error1"
                 }
               }
             },
@@ -15785,7 +15757,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/payment_statuses_id_validate_coupon_get_422_response"
+                  "$ref": "#/components/schemas/error1"
                 }
               }
             },
@@ -16866,7 +16838,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/scheduling_bookings_post_422_response"
+                  "$ref": "#/components/schemas/error1"
                 }
               }
             },

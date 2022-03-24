@@ -204,8 +204,8 @@ public class AppointmentsApi {
             Type localVarReturnType = new TypeToken<GlobalAppointmentsGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalAppointmentsGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<GlobalAppointmentsGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -351,8 +351,8 @@ public class AppointmentsApi {
             Type localVarReturnType = new TypeToken<SchedulingAppointmentsAppointmentIdGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingAppointmentsAppointmentIdGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingAppointmentsAppointmentIdGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -530,8 +530,8 @@ public class AppointmentsApi {
             Type localVarReturnType = new TypeToken<SchedulingAppointmentsGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingAppointmentsGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingAppointmentsGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

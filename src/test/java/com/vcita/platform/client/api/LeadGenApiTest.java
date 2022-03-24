@@ -16,8 +16,8 @@ package com.vcita.platform.client.api;
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.InlineObject15;
 import com.vcita.platform.client.model.LeadgenPost201Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,27 +27,23 @@ import java.util.Map;
 /**
  * API tests for LeadGenApi
  */
-@Ignore
+@Disabled
 public class LeadGenApiTest {
 
     private final LeadGenApi api = new LeadGenApi();
 
-    
     /**
      * Creates a lead
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void leadgenPostTest() throws ApiException {
         String authorization = null;
         String xOnBehalfOf = null;
         InlineObject15 inlineObject15 = null;
-                LeadgenPost201Response response = api.leadgenPost(authorization, xOnBehalfOf, inlineObject15);
+        LeadgenPost201Response response = api.leadgenPost(authorization, xOnBehalfOf, inlineObject15);
         // TODO: test validations
     }
-    
+
 }

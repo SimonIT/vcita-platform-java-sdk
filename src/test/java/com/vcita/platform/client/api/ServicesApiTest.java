@@ -18,8 +18,8 @@ import com.vcita.platform.client.model.CategoriesCategoryIdServicesGet200Respons
 import com.vcita.platform.client.model.GlobalServicesGet200Response;
 import com.vcita.platform.client.model.ServicesGet200Response;
 import com.vcita.platform.client.model.ServicesServiceIdGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,19 +29,17 @@ import java.util.Map;
 /**
  * API tests for ServicesApi
  */
-@Ignore
+@Disabled
 public class ServicesApiTest {
 
     private final ServicesApi api = new ServicesApi();
 
-    
     /**
      * Get Services List by category [Alpha]
      *
      * Get Services List by category [Alpha]
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void categoriesCategoryIdServicesGetTest() throws ApiException {
@@ -52,34 +50,32 @@ public class ServicesApiTest {
         Boolean hasFutureInstance = null;
         Integer page = null;
         Integer perPage = null;
-                CategoriesCategoryIdServicesGet200Response response = api.categoriesCategoryIdServicesGet(categoryId, businessId, authorization, staffArray, hasFutureInstance, page, perPage);
+        CategoriesCategoryIdServicesGet200Response response = api.categoriesCategoryIdServicesGet(categoryId, businessId, authorization, staffArray, hasFutureInstance, page, perPage);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of services
      *
      * Gets a list of services
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalServicesGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalServicesGet200Response response = api.globalServicesGet(date, authorization, page);
+        GlobalServicesGet200Response response = api.globalServicesGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Get Services List [Alpha]
      *
      * Get Services List [Alpha]
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void servicesGetTest() throws ApiException {
@@ -92,24 +88,23 @@ public class ServicesApiTest {
         Boolean extraDecoratorFields = null;
         Integer page = null;
         Integer perPage = null;
-                ServicesGet200Response response = api.servicesGet(businessId, authorization, staffArray, hasFutureInstance, includeHidden, activeStaffOnly, extraDecoratorFields, page, perPage);
+        ServicesGet200Response response = api.servicesGet(businessId, authorization, staffArray, hasFutureInstance, includeHidden, activeStaffOnly, extraDecoratorFields, page, perPage);
         // TODO: test validations
     }
-    
+
     /**
      * Get Service By ID [Alpha]
      *
      * Get Service By ID [Alpha]
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void servicesServiceIdGetTest() throws ApiException {
         String serviceId = null;
         String authorization = null;
-                ServicesServiceIdGet200Response response = api.servicesServiceIdGet(serviceId, authorization);
+        ServicesServiceIdGet200Response response = api.servicesServiceIdGet(serviceId, authorization);
         // TODO: test validations
     }
-    
+
 }

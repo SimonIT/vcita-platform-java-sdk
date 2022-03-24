@@ -204,8 +204,8 @@ public class MarketingApi {
             Type localVarReturnType = new TypeToken<GlobalCampaignRecipientsGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalCampaignRecipientsGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<GlobalCampaignRecipientsGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -361,8 +361,8 @@ public class MarketingApi {
             Type localVarReturnType = new TypeToken<GlobalCampaignsGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalCampaignsGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<GlobalCampaignsGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -518,8 +518,8 @@ public class MarketingApi {
             Type localVarReturnType = new TypeToken<GlobalScheduledCampaignsGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalScheduledCampaignsGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<GlobalScheduledCampaignsGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

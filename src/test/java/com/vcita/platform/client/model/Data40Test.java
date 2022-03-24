@@ -22,9 +22,8 @@ import com.vcita.platform.client.model.Booking1;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -47,6 +46,14 @@ public class Data40Test {
     @Test
     public void bookingTest() {
         // TODO: test booking
+    }
+
+    /**
+     * Test the property 'token'
+     */
+    @Test
+    public void tokenTest() {
+        // TODO: test token
     }
 
 }

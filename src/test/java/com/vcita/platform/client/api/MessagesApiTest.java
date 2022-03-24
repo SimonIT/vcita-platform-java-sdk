@@ -16,8 +16,8 @@ package com.vcita.platform.client.api;
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.InlineObject16;
 import com.vcita.platform.client.model.MessagesPost201Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,26 +27,24 @@ import java.util.Map;
 /**
  * API tests for MessagesApi
  */
-@Ignore
+@Disabled
 public class MessagesApiTest {
 
     private final MessagesApi api = new MessagesApi();
 
-    
     /**
      * Create a Message
      *
      * Creates a Message.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void messagesPostTest() throws ApiException {
         String authorization = null;
         InlineObject16 inlineObject16 = null;
-                MessagesPost201Response response = api.messagesPost(authorization, inlineObject16);
+        MessagesPost201Response response = api.messagesPost(authorization, inlineObject16);
         // TODO: test validations
     }
-    
+
 }

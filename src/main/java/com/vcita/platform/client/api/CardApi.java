@@ -187,8 +187,8 @@ public class CardApi {
             Type localVarReturnType = new TypeToken<PaymentCardsSyncCardPost201Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PaymentCardsSyncCardPost201Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PaymentCardsSyncCardPost201Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

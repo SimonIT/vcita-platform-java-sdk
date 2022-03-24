@@ -197,8 +197,8 @@ public class SchedulingFormsApi {
             Type localVarReturnType = new TypeToken<SchedulingSchedulingFormsGetFormGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<SchedulingSchedulingFormsGetFormGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<SchedulingSchedulingFormsGetFormGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

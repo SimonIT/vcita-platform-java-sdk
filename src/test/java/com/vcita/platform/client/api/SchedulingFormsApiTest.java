@@ -15,8 +15,8 @@ package com.vcita.platform.client.api;
 
 import com.vcita.platform.client.ApiException;
 import com.vcita.platform.client.model.SchedulingSchedulingFormsGetFormGet200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,27 +26,21 @@ import java.util.Map;
 /**
  * API tests for SchedulingFormsApi
  */
-@Ignore
+@Disabled
 public class SchedulingFormsApiTest {
 
     private final SchedulingFormsApi api = new SchedulingFormsApi();
 
-    
     /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void schedulingSchedulingFormsGetFormGetTest() throws ApiException {
         String businessId = null;
         String serviceId = null;
         String sourceName = null;
-                SchedulingSchedulingFormsGetFormGet200Response response = api.schedulingSchedulingFormsGetFormGet(businessId, serviceId, sourceName);
+        SchedulingSchedulingFormsGetFormGet200Response response = api.schedulingSchedulingFormsGetFormGet(businessId, serviceId, sourceName);
         // TODO: test validations
     }
-    
+
 }

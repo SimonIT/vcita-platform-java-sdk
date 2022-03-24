@@ -452,8 +452,8 @@ public class WebhooksApi {
             Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<InlineResponse200>(){}.getType()));
-            e.setErrorObjectType(new GenericType<InlineResponse200>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

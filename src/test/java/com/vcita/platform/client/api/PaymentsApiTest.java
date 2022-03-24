@@ -21,8 +21,8 @@ import com.vcita.platform.client.model.InlineObject24;
 import com.vcita.platform.client.model.PaymentsGet201Response;
 import com.vcita.platform.client.model.PaymentsPaymentUidMatchPost201Response;
 import com.vcita.platform.client.model.PaymentsPost201Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,19 +32,15 @@ import java.util.Map;
 /**
  * API tests for PaymentsApi
  */
-@Ignore
+@Disabled
 public class PaymentsApiTest {
 
     private final PaymentsApi api = new PaymentsApi();
 
-    
     /**
      * Get Payments of Client
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void clientsClientIdPaymentsGetTest() throws ApiException {
@@ -52,34 +48,30 @@ public class PaymentsApiTest {
         String clientId = null;
         String page = null;
         String perPage = null;
-                ClientsClientIdPaymentsGet201Response response = api.clientsClientIdPaymentsGet(authorization, clientId, page, perPage);
+        ClientsClientIdPaymentsGet201Response response = api.clientsClientIdPaymentsGet(authorization, clientId, page, perPage);
         // TODO: test validations
     }
-    
+
     /**
      * Gets a list of payments
      *
      * Gets a list of payments
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalPaymentsGetTest() throws ApiException {
         String date = null;
         String authorization = null;
         Integer page = null;
-                GlobalPaymentsGet200Response response = api.globalPaymentsGet(date, authorization, page);
+        GlobalPaymentsGet200Response response = api.globalPaymentsGet(date, authorization, page);
         // TODO: test validations
     }
-    
+
     /**
      * Get Payments List
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentsGetTest() throws ApiException {
@@ -87,41 +79,35 @@ public class PaymentsApiTest {
         String page = null;
         String perPage = null;
         String invoiceId = null;
-                PaymentsGet201Response response = api.paymentsGet(authorization, page, perPage, invoiceId);
+        PaymentsGet201Response response = api.paymentsGet(authorization, page, perPage, invoiceId);
         // TODO: test validations
     }
-    
+
     /**
      * Match Payment
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentsPaymentUidMatchPostTest() throws ApiException {
         String authorization = null;
         String paymentUid = null;
         InlineObject24 inlineObject24 = null;
-                PaymentsPaymentUidMatchPost201Response response = api.paymentsPaymentUidMatchPost(authorization, paymentUid, inlineObject24);
+        PaymentsPaymentUidMatchPost201Response response = api.paymentsPaymentUidMatchPost(authorization, paymentUid, inlineObject24);
         // TODO: test validations
     }
-    
+
     /**
      * Create New Payment
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void paymentsPostTest() throws ApiException {
         String authorization = null;
         InlineObject23 inlineObject23 = null;
-                PaymentsPost201Response response = api.paymentsPost(authorization, inlineObject23);
+        PaymentsPost201Response response = api.paymentsPost(authorization, inlineObject23);
         // TODO: test validations
     }
-    
+
 }
